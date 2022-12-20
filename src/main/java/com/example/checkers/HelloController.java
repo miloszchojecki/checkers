@@ -1,16 +1,31 @@
 package com.example.checkers;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 
-public class HelloController
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class HelloController implements Initializable
 {
     @FXML
-    private Label welcomeText;
+    private VBox vbox;
 
-    @FXML
-    protected void onHelloButtonClick()
+    private GridPane gridPane;
+
+    private GameLogic gameLogic;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        welcomeText.setText("Welcome to JavaFX Application!");
+        Board board = new Board();
+        gridPane = board.getGridPane();
+        vbox.getChildren().add(gridPane);
+        gameLogic = new DummyGameLogic(board);
+        gameLogic.initialize();
     }
 }
