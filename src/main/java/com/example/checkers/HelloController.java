@@ -22,10 +22,8 @@ public class HelloController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        Board board = new Board();
-        gridPane = board.getGridPane();
+        Game game = new Game();
+        gridPane = game.getBoard().getGridPane();
         vbox.getChildren().add(gridPane);
-        gameLogic = new DummyGameLogic(board);
-        gameLogic.initialize();
     }
 }

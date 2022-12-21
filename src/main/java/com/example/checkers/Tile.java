@@ -17,11 +17,15 @@ public class Tile
     private Circle circle;
     private boolean playable;
 
+    private int x, y;
+
     private final Color playableColor = Color.rgb(118, 150, 86);
     private final Color notPlayableColor = Color.rgb(238, 238, 210);
 
-    public Tile()
+    public Tile(int x, int y)
     {
+        this.x = x;
+        this.y = y;
         stackPane = new StackPane();
         rectangle = new Rectangle(100, 100);
         stackPane.getChildren().add(rectangle);

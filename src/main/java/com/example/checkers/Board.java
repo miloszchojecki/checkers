@@ -19,7 +19,7 @@ public class Board
         {
             for (int j = 0; j < 8; j++)
             {
-                tiles[i][j] = new Tile();
+                tiles[i][j] = new Tile(i, j);
                 gridPane.add(tiles[i][j].getStackPane(), i, j);
                 tiles[i][j].setPlayable((i + j) % 2 == 1);
             }
