@@ -7,8 +7,13 @@ public class DummyGameLogic extends GameLogic
     private Board gameBoard;
     private Tile[][] tiles;
 
+    private int totalMoves = 0;
+    private final int maximumMoves = 10;
+
     private ArrayList<Piece> blackPieces;
     private ArrayList<Piece> whitePieces;
+
+    private PieceColor winner = null;
 
 
     public DummyGameLogic(Board board)
@@ -41,4 +46,54 @@ public class DummyGameLogic extends GameLogic
             }
     }
 
+    public ArrayList<Tile> getPossibleMoves(Tile tile)
+    {
+        int tileX = tile.getX();
+        int tileY = tile.getY();
+        ArrayList<Tile> possibleMoves = new ArrayList<>();
+        try
+        {
+            possibleMoves.add(tiles[tileX-1][tileY-1]);
+        }
+        catch (Exception ignored) {}
+        try
+        {
+            possibleMoves.add(tiles[tileX-1][tileY+1]);
+        }
+        catch (Exception ignored) {}
+        try
+        {
+            possibleMoves.add(tiles[tileX+1][tileY-1]);
+        }
+        catch (Exception ignored) {}
+        try
+        {
+            possibleMoves.add(tiles[tileX+1][tileY+1]);
+        }
+        catch (Exception ignored) {}
+        possibleMoves.removeIf(Tile::hasPiece);
+        return possibleMoves;
+    }
+
+    public void makeMove(Tile from, Tile to)
+    {
+        Piece piece = from.getPiece();
+        from.removePiece();
+        to.placePiece(piece);
+        totalMoves++;
+        if(totalMoves >= maximumMoves)
+        {
+            winner = to.getPieceColor();
+        }
+    }
+
+    public boolean checkWinner()
+    {
+        return winner != null;
+    }
+
+    public PieceColor getWinner()
+    {
+        return winner;
+    }
 }

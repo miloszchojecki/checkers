@@ -26,4 +26,9 @@ public class Piece
     {
         return circle;
     }
+
+    public PieceColor getPieceColor()
+    {
+        return pieceColor;
+    }
 }

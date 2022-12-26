@@ -14,15 +14,14 @@ public class HelloController implements Initializable
 {
     @FXML
     private VBox vbox;
-
+    @FXML
+    private Label textBox;
     private GridPane gridPane;
-
-    private GameLogic gameLogic;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        Game game = new Game();
+        Game game = new Game(textBox);
         gridPane = game.getBoard().getGridPane();
         vbox.getChildren().add(gridPane);
     }

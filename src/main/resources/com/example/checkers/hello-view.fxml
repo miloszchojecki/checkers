@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox fx:id="vbox" alignment="TOP_CENTER" prefHeight="526.0" prefWidth="618.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="com.example.checkers.HelloController">
+<VBox fx:id="vbox" alignment="TOP_CENTER" prefHeight="526.0" prefWidth="618.0" spacing="20.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.checkers.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -20,13 +20,13 @@
                   <Insets right="20.0" />
                </HBox.margin>
             </ChoiceBox>
-            <Button mnemonicParsing="false" text="Button" />
+            <Button mnemonicParsing="false" text="Start" />
             <Separator orientation="VERTICAL" prefHeight="200.0">
                <HBox.margin>
                   <Insets left="20.0" />
                </HBox.margin>
             </Separator>
-            <Label alignment="CENTER" prefHeight="16.0" prefWidth="280.0" text="mak" textAlignment="CENTER">
+            <Label fx:id="textBox" alignment="CENTER" prefHeight="16.0" prefWidth="280.0" text="Checkers" textAlignment="CENTER">
                <HBox.margin>
                   <Insets left="20.0" />
                </HBox.margin>
