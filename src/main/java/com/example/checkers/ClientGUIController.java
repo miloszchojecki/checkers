@@ -10,7 +10,7 @@ import javafx.scene.shape.Rectangle;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class HelloController implements Initializable
+public class ClientGUIController implements Initializable
 {
     @FXML
     private VBox vbox;
