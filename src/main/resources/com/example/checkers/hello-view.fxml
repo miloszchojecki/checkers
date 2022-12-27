@@ -20,7 +20,7 @@
                   <Insets right="20.0" />
                </HBox.margin>
             </ChoiceBox>
-            <Button mnemonicParsing="false" text="Start" />
+            <Button fx:id="startButton" mnemonicParsing="false" text="Start" />
             <Separator orientation="VERTICAL" prefHeight="200.0">
                <HBox.margin>
                   <Insets left="20.0" />

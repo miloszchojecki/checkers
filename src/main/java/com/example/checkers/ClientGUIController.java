@@ -1,7 +1,10 @@
 package com.example.checkers;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
@@ -17,12 +20,28 @@ public class ClientGUIController implements Initializable
     @FXML
     private Label textBox;
     private GridPane gridPane;
+    @FXML
+    private Button startButton;
+
+    private Game game;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        Game game = new Game(textBox);
+        game = new Game(textBox);
         gridPane = game.getBoard().getGridPane();
         vbox.getChildren().add(gridPane);
+        startButton.setOnAction(actionEvent -> startButtonHandler());
+    }
+
+    void startButtonHandler()
+    {
+        newGame();
+        //startButton.setDisable(true);
+    }
+
+    void newGame()
+    {
+        game.startGame();
     }
 }

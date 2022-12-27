@@ -27,17 +27,21 @@ public class DummyGameLogic extends GameLogic
     {
         whitePieces = new ArrayList<>();
         blackPieces = new ArrayList<>();
-        for(int i=0; i<tiles.length; i++)
-            for (int j=0; j<tiles[0].length; j++)
+        for (int i = 0; i < tiles.length; i++)
+            for (int j = 0; j < tiles[0].length; j++)
             {
-                if(j<=2 && tiles[i][j].isPlayable())
+                if (tiles[i][j].hasPiece())
+                {
+                    tiles[i][j].removePiece();
+                }
+                if (j <= 2 && tiles[i][j].isPlayable())
                 {
                     Piece newPiece = new Piece(PieceColor.BLACK);
                     tiles[i][j].placePiece(newPiece);
                     blackPieces.add(newPiece);
                 }
 
-                if(j>=5 && tiles[i][j].isPlayable())
+                if (j >= 5 && tiles[i][j].isPlayable())
                 {
                     Piece newPiece = new Piece(PieceColor.WHITE);
                     tiles[i][j].placePiece(newPiece);
@@ -53,24 +57,32 @@ public class DummyGameLogic extends GameLogic
         ArrayList<Tile> possibleMoves = new ArrayList<>();
         try
         {
-            possibleMoves.add(tiles[tileX-1][tileY-1]);
+            possibleMoves.add(tiles[tileX - 1][tileY - 1]);
         }
-        catch (Exception ignored) {}
+        catch (Exception ignored)
+        {
+        }
         try
         {
-            possibleMoves.add(tiles[tileX-1][tileY+1]);
+            possibleMoves.add(tiles[tileX - 1][tileY + 1]);
         }
-        catch (Exception ignored) {}
+        catch (Exception ignored)
+        {
+        }
         try
         {
-            possibleMoves.add(tiles[tileX+1][tileY-1]);
+            possibleMoves.add(tiles[tileX + 1][tileY - 1]);
         }
-        catch (Exception ignored) {}
+        catch (Exception ignored)
+        {
+        }
         try
         {
-            possibleMoves.add(tiles[tileX+1][tileY+1]);
+            possibleMoves.add(tiles[tileX + 1][tileY + 1]);
         }
-        catch (Exception ignored) {}
+        catch (Exception ignored)
+        {
+        }
         possibleMoves.removeIf(Tile::hasPiece);
         return possibleMoves;
     }
@@ -81,7 +93,7 @@ public class DummyGameLogic extends GameLogic
         from.removePiece();
         to.placePiece(piece);
         totalMoves++;
-        if(totalMoves >= maximumMoves)
+        if (totalMoves >= maximumMoves)
         {
             winner = to.getPieceColor();
         }

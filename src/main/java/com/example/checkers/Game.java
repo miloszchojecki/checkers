@@ -29,6 +29,10 @@ public class Game
         this.textbox = textbox;
         board = new Board();
         tiles = board.getTiles();
+    }
+
+    public void startGame()
+    {
         gameLogic = new DummyGameLogic(board);
         gameLogic.initialize();
         turn = PieceColor.WHITE;
