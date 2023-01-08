@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d9e751d-f614-4953-834a-e8b7bf17f110" name="Changes" comment="renamed client app classes">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClassicCheckersGameLogic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/EnglishCheckersGameLogic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/MoveResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/MoveType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/TwoLineCheckersGameLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClientGUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClientGUIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/DummyGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/DummyGameLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/checkers/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/checkers/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ColorSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/ColorSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/GameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/GameLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/Tile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -43,16 +50,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/vytax/Desktop/sem2/lista7/java/Client&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/vytax/Desktop/sem2/lista7/java/Client",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/example/checkers" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.checkers" />
     </key>
   </component>
   <component name="RunManager">
@@ -83,6 +100,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670880260657</updated>
+      <workItem from="1673213242256" duration="3133000" />
     </task>
     <task id="LOCAL-00001" summary="inital commit">
       <created>1670880543562</created>
@@ -121,6 +139,9 @@
     </task>
     <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
