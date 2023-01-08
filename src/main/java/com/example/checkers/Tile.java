@@ -16,13 +16,14 @@ import static com.example.checkers.ColorSet.playableColor;
 
 public class Tile
 {
-    private StackPane stackPane;
-    private Rectangle rectangle;
+    private final StackPane stackPane;
+    private final Rectangle rectangle;
     private Piece piece;
     private Circle circle;
     private boolean playable;
 
-    private int x, y;
+    private final int x;
+    private final int y;
 
     private Color currentColor;
 
