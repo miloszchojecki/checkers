@@ -48,6 +48,34 @@ public class ClassicCheckersGameLogic extends GameLogic{
         int tileX = tile.getX();
         int tileY = tile.getY();
         ArrayList<Tile> possibleMoves = gameBoard.getTileNeighbors(tile);
+        if (possibleMoves.get(0).hasPiece()) {
+            if (gameBoard.getNeighbor(possibleMoves.get(0), -1, -1) != null &&
+                    !gameBoard.getNeighbor(possibleMoves.get(0), -1, -1).hasPiece()) {
+                possibleMoves.set(0, gameBoard.getNeighbor(possibleMoves.get(0), -1, -1));
+            }
+            else possibleMoves.set(0, tile);
+        }
+        if (possibleMoves.get(1).hasPiece()) {
+            if (gameBoard.getNeighbor(possibleMoves.get(1), -1, +1) != null &&
+                    !gameBoard.getNeighbor(possibleMoves.get(1), -1, +1).hasPiece()) {
+                possibleMoves.set(1, gameBoard.getNeighbor(possibleMoves.get(1), -1, +1));
+            }
+            else possibleMoves.set(1, tile);
+        }
+        if (possibleMoves.get(2).hasPiece()) {
+            if (gameBoard.getNeighbor(possibleMoves.get(2), +1, -1) != null &&
+                    !gameBoard.getNeighbor(possibleMoves.get(2), +1, -1).hasPiece()) {
+                possibleMoves.set(2, gameBoard.getNeighbor(possibleMoves.get(2), +1, -1));
+            }
+            else possibleMoves.set(2, tile);
+        }
+        if (possibleMoves.get(3).hasPiece()) {
+            if (gameBoard.getNeighbor(possibleMoves.get(3), +1, +1) != null &&
+                    !gameBoard.getNeighbor(possibleMoves.get(3), +1, +1).hasPiece()) {
+                possibleMoves.set(3, gameBoard.getNeighbor(possibleMoves.get(3), +1, +1));
+            }
+            else possibleMoves.set(3, tile);
+        }
         return possibleMoves;
     }
 

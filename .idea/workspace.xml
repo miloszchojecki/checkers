@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d9e751d-f614-4953-834a-e8b7bf17f110" name="Changes" comment="renamed client app classes">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClassicCheckersGameLogic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/EnglishCheckersGameLogic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/MoveResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/MoveType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/TwoLineCheckersGameLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ColorSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/ColorSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/GameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/GameLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/Tile.java" afterDir="false" />
-    </list>
+    <list default="true" id="8d9e751d-f614-4953-834a-e8b7bf17f110" name="Changes" comment="beginning of game logic, some methods in board class" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,20 +37,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/vytax/Desktop/sem2/lista7/java/Client",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/vytax/Desktop/sem2/lista7/java/Client&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/example/checkers" />
@@ -100,7 +87,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670880260657</updated>
-      <workItem from="1673213242256" duration="3133000" />
+      <workItem from="1673213242256" duration="3488000" />
+      <workItem from="1673217177915" duration="8000" />
+      <workItem from="1673341364823" duration="2026000" />
     </task>
     <task id="LOCAL-00001" summary="inital commit">
       <created>1670880543562</created>
@@ -137,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672165812115</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="beginning of game logic, some methods in board class">
+      <created>1673216720984</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673216720984</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +156,7 @@
     <MESSAGE value="added basic mouse click handle" />
     <MESSAGE value="basic movement and dummy game logic" />
     <MESSAGE value="renamed client app classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="renamed client app classes" />
+    <MESSAGE value="beginning of game logic, some methods in board class" />
+    <option name="LAST_COMMIT_MESSAGE" value="beginning of game logic, some methods in board class" />
   </component>
 </project>
