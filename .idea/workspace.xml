@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d9e751d-f614-4953-834a-e8b7bf17f110" name="Changes" comment="dodanie zbijania jako możliwy ruch">
+    <list default="true" id="8d9e751d-f614-4953-834a-e8b7bf17f110" name="Changes" comment="managed exceptions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClassicCheckersGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClassicCheckersGameLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/DummyGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/DummyGameLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +93,7 @@
       <workItem from="1673213242256" duration="3488000" />
       <workItem from="1673217177915" duration="8000" />
       <workItem from="1673341364823" duration="2409000" />
-      <workItem from="1673343911256" duration="1283000" />
+      <workItem from="1673343911256" duration="3662000" />
     </task>
     <task id="LOCAL-00001" summary="inital commit">
       <created>1670880543562</created>
@@ -146,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673343702634</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="managed exceptions">
+      <created>1673345318090</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673345318090</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +176,7 @@
     <MESSAGE value="renamed client app classes" />
     <MESSAGE value="beginning of game logic, some methods in board class" />
     <MESSAGE value="dodanie zbijania jako możliwy ruch" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodanie zbijania jako możliwy ruch" />
+    <MESSAGE value="managed exceptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="managed exceptions" />
   </component>
 </project>

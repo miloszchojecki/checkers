@@ -46,47 +46,78 @@ public class DummyGameLogic extends GameLogic {
     public ArrayList<Tile> getPossibleMoves(Tile tile) {
         int tileX = tile.getX();
         int tileY = tile.getY();
+        boolean possibleKill = false;
         ArrayList<Tile> possibleMoves = new ArrayList<>();
         try {
             Tile current = tiles[tileX - 1][tileY - 1];
             if (current.hasPiece()) {
                 if (gameBoard.getNeighbor(current, -1, -1) != null &&
-                        !gameBoard.getNeighbor(current, -1, -1).hasPiece()) {
+                        !gameBoard.getNeighbor(current, -1, -1).hasPiece() &&
+                        current.getPieceColor() != tile.getPieceColor()) {
                     possibleMoves.add(gameBoard.getNeighbor(current, -1, -1));
+                    possibleKill = true;
                 }
-            } else possibleMoves.add(current);
-
+            }
         } catch (Exception ignored) {
         }
         try {
             Tile current = tiles[tileX - 1][tileY + 1];
             if (current.hasPiece()) {
                 if (gameBoard.getNeighbor(current, -1, +1) != null &&
-                        !gameBoard.getNeighbor(current, -1, +1).hasPiece()) {
+                        !gameBoard.getNeighbor(current, -1, +1).hasPiece() &&
+                        current.getPieceColor() != tile.getPieceColor()) {
                     possibleMoves.add(gameBoard.getNeighbor(current, -1, +1));
+                    possibleKill = true;
                 }
-            } else possibleMoves.add(current);
+            }
         } catch (Exception ignored) {
         }
         try {
             Tile current = tiles[tileX + 1][tileY - 1];
             if (current.hasPiece()) {
                 if (gameBoard.getNeighbor(current, +1, -1) != null &&
-                        !gameBoard.getNeighbor(current, +1, -1).hasPiece()) {
+                        !gameBoard.getNeighbor(current, +1, -1).hasPiece() &&
+                        current.getPieceColor() != tile.getPieceColor()) {
                     possibleMoves.add(gameBoard.getNeighbor(current, +1, -1));
+                    possibleKill = true;
                 }
-            } else possibleMoves.add(current);
+            }
         } catch (Exception ignored) {
         }
         try {
             Tile current = tiles[tileX + 1][tileY + 1];
             if (current.hasPiece()) {
                 if (gameBoard.getNeighbor(current, +1, +1) != null &&
-                        !gameBoard.getNeighbor(current, +1, +1).hasPiece()) {
+                        !gameBoard.getNeighbor(current, +1, +1).hasPiece() &&
+                        current.getPieceColor() != tile.getPieceColor()) {
                     possibleMoves.add(gameBoard.getNeighbor(current, +1, +1));
+                    possibleKill = true;
                 }
-            } else possibleMoves.add(current);
+            }
         } catch (Exception ignored) {
+        }
+        if (!possibleKill) {
+            if (tile.getPieceColor() == PieceColor.WHITE) {
+                try {
+                    possibleMoves.add(tiles[tileX - 1][tileY - 1]);
+                } catch (Exception ignored) {
+                }
+                try {
+                    possibleMoves.add(tiles[tileX + 1][tileY - 1]);
+                } catch (Exception ignored) {
+                }
+            }
+            else{
+                try {
+                    possibleMoves.add(tiles[tileX + 1 ][tileY + 1]);
+                } catch (Exception ignored) {
+                }
+                try {
+                    possibleMoves.add(tiles[tileX - 1][tileY + 1]);
+                } catch (Exception ignored) {
+                }
+            }
+            possibleMoves.removeIf(Tile::hasPiece);
         }
         return possibleMoves;
     }
