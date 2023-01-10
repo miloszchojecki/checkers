@@ -6,8 +6,7 @@ import javafx.scene.input.MouseEvent;
 
 import java.util.ArrayList;
 
-public class Game
-{
+public class Game {
     private DummyGameLogic gameLogic;
 
     private Board board;
@@ -24,48 +23,39 @@ public class Game
 
     private boolean movePossible = true;
 
-    public Game(Label textbox)
-    {
+    public Game(Label textbox) {
         this.textbox = textbox;
         board = new Board();
         tiles = board.getTiles();
     }
 
-    public void startGame()
-    {
+    public void startGame() {
         gameLogic = new DummyGameLogic(board);
         gameLogic.initialize();
         turn = PieceColor.WHITE;
         textbox.setText(Texts.whiteTurnMsg);
 
         for (int i = 0; i < tiles.length; i++)
-            for (int j = 0; j < tiles[0].length; j++)
-            {
+            for (int j = 0; j < tiles[0].length; j++) {
                 int finalI = i;
                 int finalJ = j;
                 tiles[i][j].getStackPane().setOnMouseClicked(event -> clickHandle(tiles[finalI][finalJ]));
             }
     }
 
-    void clickHandle(Tile tile)
-    {
+    void clickHandle(Tile tile) {
         System.out.println(tile.getX() + ", " + tile.getY());
         if (!movePossible)
             return;
-        if (tile.hasPiece())
-        {
+        if (tile.hasPiece()) {
             if (tile.getPieceColor() != turn)
                 return;
             select(tile);
             getPossibleMoves(tile);
-        }
-        else if (possibleMoves != null && selected != null)
-        {
-            if (possibleMoves.contains(tile))
-            {
+        } else if (possibleMoves != null && selected != null) {
+            if (possibleMoves.contains(tile)) {
                 gameLogic.makeMove(selected, tile);
-                if (gameLogic.checkWinner())
-                {
+                if (gameLogic.checkWinner()) {
                     endGame(gameLogic.getWinner());
                     return;
                 }
@@ -76,22 +66,17 @@ public class Game
         }
     }
 
-    void changeTurn()
-    {
-        if (turn == PieceColor.WHITE)
-        {
+    void changeTurn() {
+        if (turn == PieceColor.WHITE) {
             turn = PieceColor.BLACK;
             textbox.setText(Texts.blackTurnMsg);
-        }
-        else
-        {
+        } else {
             turn = PieceColor.WHITE;
             textbox.setText(Texts.whiteTurnMsg);
         }
     }
 
-    void resetSelection()
-    {
+    void resetSelection() {
         if (selected == null)
             return;
 
@@ -99,48 +84,40 @@ public class Game
         selected = null;
     }
 
-    void select(Tile tile)
-    {
-        if (selected != null)
-        {
+    void select(Tile tile) {
+        if (selected != null) {
             selected.setSelected(false);
         }
         selected = tile;
         selected.setSelected(true);
     }
 
-    void resetPossibleMoves()
-    {
+    void resetPossibleMoves() {
         if (possibleMoves == null)
             return;
 
-        for (Tile possible : possibleMoves)
-        {
+        for (Tile possible : possibleMoves) {
             possible.setPossible(false);
         }
         possibleMoves = null;
     }
 
-    void getPossibleMoves(Tile tile)
-    {
+    void getPossibleMoves(Tile tile) {
         resetPossibleMoves();
         possibleMoves = gameLogic.getPossibleMoves(tile);
-        for (Tile possible : possibleMoves)
-        {
+        for (Tile possible : possibleMoves) {
             possible.setPossible(true);
         }
     }
 
-    void endGame(PieceColor winner)
-    {
+    void endGame(PieceColor winner) {
         resetPossibleMoves();
         resetSelection();
         movePossible = false;
         textbox.setText(winner == PieceColor.WHITE ? Texts.whiteWinMsg : Texts.blackWinMsg);
     }
 
-    public Board getBoard()
-    {
+    public Board getBoard() {
         return board;
     }
 }

@@ -47,34 +47,47 @@ public class ClassicCheckersGameLogic extends GameLogic{
     public ArrayList<Tile> getPossibleMoves(Tile tile) {
         int tileX = tile.getX();
         int tileY = tile.getY();
-        ArrayList<Tile> possibleMoves = gameBoard.getTileNeighbors(tile);
-        if (possibleMoves.get(0).hasPiece()) {
-            if (gameBoard.getNeighbor(possibleMoves.get(0), -1, -1) != null &&
-                    !gameBoard.getNeighbor(possibleMoves.get(0), -1, -1).hasPiece()) {
-                possibleMoves.set(0, gameBoard.getNeighbor(possibleMoves.get(0), -1, -1));
-            }
-            else possibleMoves.set(0, tile);
+        ArrayList<Tile> possibleMoves = new ArrayList<>();
+        try {
+            Tile current = tiles[tileX - 1][tileY - 1];
+            if (current.hasPiece()) {
+                if (gameBoard.getNeighbor(current, -1, -1) != null &&
+                        !gameBoard.getNeighbor(current, -1, -1).hasPiece()) {
+                    possibleMoves.add(gameBoard.getNeighbor(current, -1, -1));
+                }
+            } else possibleMoves.add(current);
+
+        } catch (Exception ignored) {
         }
-        if (possibleMoves.get(1).hasPiece()) {
-            if (gameBoard.getNeighbor(possibleMoves.get(1), -1, +1) != null &&
-                    !gameBoard.getNeighbor(possibleMoves.get(1), -1, +1).hasPiece()) {
-                possibleMoves.set(1, gameBoard.getNeighbor(possibleMoves.get(1), -1, +1));
-            }
-            else possibleMoves.set(1, tile);
+        try {
+            Tile current = tiles[tileX - 1][tileY + 1];
+            if (current.hasPiece()) {
+                if (gameBoard.getNeighbor(current, -1, +1) != null &&
+                        !gameBoard.getNeighbor(current, -1, +1).hasPiece()) {
+                    possibleMoves.add(gameBoard.getNeighbor(current, -1, +1));
+                }
+            } else possibleMoves.add(current);
+        } catch (Exception ignored) {
         }
-        if (possibleMoves.get(2).hasPiece()) {
-            if (gameBoard.getNeighbor(possibleMoves.get(2), +1, -1) != null &&
-                    !gameBoard.getNeighbor(possibleMoves.get(2), +1, -1).hasPiece()) {
-                possibleMoves.set(2, gameBoard.getNeighbor(possibleMoves.get(2), +1, -1));
-            }
-            else possibleMoves.set(2, tile);
+        try {
+            Tile current = tiles[tileX + 1][tileY - 1];
+            if (current.hasPiece()) {
+                if (gameBoard.getNeighbor(current, +1, -1) != null &&
+                        !gameBoard.getNeighbor(current, +1, -1).hasPiece()) {
+                    possibleMoves.add(gameBoard.getNeighbor(current, +1, -1));
+                }
+            } else possibleMoves.add(current);
+        } catch (Exception ignored) {
         }
-        if (possibleMoves.get(3).hasPiece()) {
-            if (gameBoard.getNeighbor(possibleMoves.get(3), +1, +1) != null &&
-                    !gameBoard.getNeighbor(possibleMoves.get(3), +1, +1).hasPiece()) {
-                possibleMoves.set(3, gameBoard.getNeighbor(possibleMoves.get(3), +1, +1));
-            }
-            else possibleMoves.set(3, tile);
+        try {
+            Tile current = tiles[tileX + 1][tileY + 1];
+            if (current.hasPiece()) {
+                if (gameBoard.getNeighbor(current, +1, +1) != null &&
+                        !gameBoard.getNeighbor(current, +1, +1).hasPiece()) {
+                    possibleMoves.add(gameBoard.getNeighbor(current, +1, +1));
+                }
+            } else possibleMoves.add(current);
+        } catch (Exception ignored) {
         }
         return possibleMoves;
     }
