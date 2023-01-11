@@ -124,6 +124,9 @@ public class DummyGameLogic extends GameLogic {
 
     public void makeMove(Tile from, Tile to) {
         Piece piece = from.getPiece();
+        if(Math.abs(from.getX()-to.getX())>1) {
+            tiles[(from.getX() + to.getX())/2][(from.getY() + to.getY())/2].removePiece();
+        }
         from.removePiece();
         to.placePiece(piece);
         totalMoves++;

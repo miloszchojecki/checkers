@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8d9e751d-f614-4953-834a-e8b7bf17f110" name="Changes" comment="managed exceptions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClientApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/DummyGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/DummyGameLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/MoveResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/MoveType.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -94,6 +97,7 @@
       <workItem from="1673217177915" duration="8000" />
       <workItem from="1673341364823" duration="2409000" />
       <workItem from="1673343911256" duration="3662000" />
+      <workItem from="1673443341163" duration="1314000" />
     </task>
     <task id="LOCAL-00001" summary="inital commit">
       <created>1670880543562</created>
