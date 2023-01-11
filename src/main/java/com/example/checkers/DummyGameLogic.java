@@ -7,7 +7,7 @@ public class DummyGameLogic extends GameLogic {
     private Tile[][] tiles;
 
     private int totalMoves = 0;
-    private final int maximumMoves = 10;
+    private final int maximumMoves = 50;
 
     private ArrayList<Piece> blackPieces;
     private ArrayList<Piece> whitePieces;
@@ -106,10 +106,9 @@ public class DummyGameLogic extends GameLogic {
                     possibleMoves.add(tiles[tileX + 1][tileY - 1]);
                 } catch (Exception ignored) {
                 }
-            }
-            else{
+            } else {
                 try {
-                    possibleMoves.add(tiles[tileX + 1 ][tileY + 1]);
+                    possibleMoves.add(tiles[tileX + 1][tileY + 1]);
                 } catch (Exception ignored) {
                 }
                 try {
@@ -124,8 +123,8 @@ public class DummyGameLogic extends GameLogic {
 
     public void makeMove(Tile from, Tile to) {
         Piece piece = from.getPiece();
-        if(Math.abs(from.getX()-to.getX())>1) {
-            tiles[(from.getX() + to.getX())/2][(from.getY() + to.getY())/2].removePiece();
+        if (Math.abs(from.getX() - to.getX()) > 1) {
+            tiles[(from.getX() + to.getX()) / 2][(from.getY() + to.getY()) / 2].removePiece();
         }
         from.removePiece();
         to.placePiece(piece);

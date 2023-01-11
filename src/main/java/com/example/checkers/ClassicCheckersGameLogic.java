@@ -2,108 +2,145 @@ package com.example.checkers;
 
 import java.util.ArrayList;
 
-public class ClassicCheckersGameLogic extends GameLogic{
+public class ClassicCheckersGameLogic extends GameLogic {
 
     private Board gameBoard;
     private Tile[][] tiles;
 
     private int totalMoves = 0;
-    private final int maximumMoves = 10;
+    private final int maximumMoves = 100;
 
     private ArrayList<Piece> blackPieces;
     private ArrayList<Piece> whitePieces;
 
     private PieceColor winner = null;
 
-    public ClassicCheckersGameLogic(Board board)
-    {
+
+    public ClassicCheckersGameLogic(Board board) {
         this.gameBoard = board;
         tiles = gameBoard.getTiles();
     }
+
     @Override
     public void initialize() {
         whitePieces = new ArrayList<>();
         blackPieces = new ArrayList<>();
-        for (Tile[] tile : tiles)
+        for (int i = 0; i < tiles.length; i++)
             for (int j = 0; j < tiles[0].length; j++) {
-                if (tile[j].hasPiece()) {
-                    tile[j].removePiece();
+                if (tiles[i][j].hasPiece()) {
+                    tiles[i][j].removePiece();
                 }
-                if (j <= 2 && tile[j].isPlayable()) {
+                if (j <= 2 && tiles[i][j].isPlayable()) {
                     Piece newPiece = new Piece(PieceColor.BLACK);
-                    tile[j].placePiece(newPiece);
+                    tiles[i][j].placePiece(newPiece);
                     blackPieces.add(newPiece);
                 }
 
-                if (j >= 5 && tile[j].isPlayable()) {
+                if (j >= 5 && tiles[i][j].isPlayable()) {
                     Piece newPiece = new Piece(PieceColor.WHITE);
-                    tile[j].placePiece(newPiece);
+                    tiles[i][j].placePiece(newPiece);
                     whitePieces.add(newPiece);
                 }
             }
     }
 
-    @Override
     public ArrayList<Tile> getPossibleMoves(Tile tile) {
         int tileX = tile.getX();
         int tileY = tile.getY();
+        boolean possibleKill = false;
         ArrayList<Tile> possibleMoves = new ArrayList<>();
         try {
             Tile current = tiles[tileX - 1][tileY - 1];
             if (current.hasPiece()) {
                 if (gameBoard.getNeighbor(current, -1, -1) != null &&
-                        !gameBoard.getNeighbor(current, -1, -1).hasPiece()) {
+                        !gameBoard.getNeighbor(current, -1, -1).hasPiece() &&
+                        current.getPieceColor() != tile.getPieceColor()) {
                     possibleMoves.add(gameBoard.getNeighbor(current, -1, -1));
+                    possibleKill = true;
                 }
-            } else possibleMoves.add(current);
-
+            }
         } catch (Exception ignored) {
         }
         try {
             Tile current = tiles[tileX - 1][tileY + 1];
             if (current.hasPiece()) {
                 if (gameBoard.getNeighbor(current, -1, +1) != null &&
-                        !gameBoard.getNeighbor(current, -1, +1).hasPiece()) {
+                        !gameBoard.getNeighbor(current, -1, +1).hasPiece() &&
+                        current.getPieceColor() != tile.getPieceColor()) {
                     possibleMoves.add(gameBoard.getNeighbor(current, -1, +1));
+                    possibleKill = true;
                 }
-            } else possibleMoves.add(current);
+            }
         } catch (Exception ignored) {
         }
         try {
             Tile current = tiles[tileX + 1][tileY - 1];
             if (current.hasPiece()) {
                 if (gameBoard.getNeighbor(current, +1, -1) != null &&
-                        !gameBoard.getNeighbor(current, +1, -1).hasPiece()) {
+                        !gameBoard.getNeighbor(current, +1, -1).hasPiece() &&
+                        current.getPieceColor() != tile.getPieceColor()) {
                     possibleMoves.add(gameBoard.getNeighbor(current, +1, -1));
+                    possibleKill = true;
                 }
-            } else possibleMoves.add(current);
+            }
         } catch (Exception ignored) {
         }
         try {
             Tile current = tiles[tileX + 1][tileY + 1];
             if (current.hasPiece()) {
                 if (gameBoard.getNeighbor(current, +1, +1) != null &&
-                        !gameBoard.getNeighbor(current, +1, +1).hasPiece()) {
+                        !gameBoard.getNeighbor(current, +1, +1).hasPiece() &&
+                        current.getPieceColor() != tile.getPieceColor()) {
                     possibleMoves.add(gameBoard.getNeighbor(current, +1, +1));
+                    possibleKill = true;
                 }
-            } else possibleMoves.add(current);
+            }
         } catch (Exception ignored) {
+        }
+        if (!possibleKill) {
+            if (tile.getPieceColor() == PieceColor.WHITE) {
+                try {
+                    possibleMoves.add(tiles[tileX - 1][tileY - 1]);
+                } catch (Exception ignored) {
+                }
+                try {
+                    possibleMoves.add(tiles[tileX + 1][tileY - 1]);
+                } catch (Exception ignored) {
+                }
+            } else {
+                try {
+                    possibleMoves.add(tiles[tileX + 1][tileY + 1]);
+                } catch (Exception ignored) {
+                }
+                try {
+                    possibleMoves.add(tiles[tileX - 1][tileY + 1]);
+                } catch (Exception ignored) {
+                }
+            }
+            possibleMoves.removeIf(Tile::hasPiece);
         }
         return possibleMoves;
     }
 
-    @Override
     public void makeMove(Tile from, Tile to) {
+        Piece piece = from.getPiece();
+        if (Math.abs(from.getX() - to.getX()) > 1) {
+            tiles[(from.getX() + to.getX()) / 2][(from.getY() + to.getY()) / 2].removePiece();
 
+        }
+        from.removePiece();
+        to.placePiece(piece);
+        totalMoves++;
+        if (totalMoves >= maximumMoves) {
+            winner = to.getPieceColor();
+        }
     }
 
-    @Override
     public boolean checkWinner() {
-        return false;
+        return winner != null;
     }
 
-    @Override
     public PieceColor getWinner() {
-        return null;
+        return winner;
     }
 }
