@@ -87,6 +87,7 @@ public class DummyGameLogic extends GameLogic
         return tilesToCoordinates(possibleMoves);
     }
 
+
     public MoveInfo makeMove(TileCoordinates fromCoordinates, TileCoordinates toCoordinates)
     {
         //if(!getPossibleMoves(fromCoordinates).contains(toCoordinates))
@@ -105,6 +106,11 @@ public class DummyGameLogic extends GameLogic
         }
         changeTurn();
         return new MoveInfo(to.getPieceColor(), turn, null, false, winner);
+    }
+
+    @Override
+    public boolean isKillPossible(TileCoordinates tile) {
+        return false;
     }
 
     //do usuniecia
