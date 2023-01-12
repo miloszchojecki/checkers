@@ -1,0 +1,121 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"8d9e751d-f614-4953-834a-e8b7bf17f110\" name=\"Changes\" comment=\"killing works\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/checkers/ClassicCheckersGameLogic.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/checkers/ClassicCheckersGameLogic.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/checkers/DummyGameLogic.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/checkers/DummyGameLogic.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Enum\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"MavenImportPreferences\">\n    <option name=\"importingSettings\">\n      <MavenImportingSettings>\n        <option name=\"workspaceImportEnabled\" value=\"true\" />\n      </MavenImportingSettings>\n    </option>\n  </component>\n  <component name=\"ProjectId\" id=\"2IpZ02AudeaSjXgGSVgRS56eLuE\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/home/vytax/Desktop/sem2/lista7/java/Client&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/main/java/com/example/checkers\" />\n    </key>\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\n      <recent name=\"com.example.checkers\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"ClientApplication\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.example.checkers.ClientApplication\" />\n      <module name=\"checkers\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.example.checkers.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.ClientApplication\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"8d9e751d-f614-4953-834a-e8b7bf17f110\" name=\"Changes\" comment=\"\" />\n      <created>1670880260657</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1670880260657</updated>\n      <workItem from=\"1673213242256\" duration=\"3488000\" />\n      <workItem from=\"1673217177915\" duration=\"8000\" />\n      <workItem from=\"1673341364823\" duration=\"2409000\" />\n      <workItem from=\"1673343911256\" duration=\"3662000\" />\n      <workItem from=\"1673443341163\" duration=\"2998000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"inital commit\">\n      <created>1670880543562</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1670880543562</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"added simple board\">\n      <created>1671494769376</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1671494769376</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"added basic mouse click handle\">\n      <created>1671640368524</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1671640368524</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"basic movement and dummy game logic\">\n      <created>1672080259344</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1672080259344</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"renamed client app classes\">\n      <created>1672165812115</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1672165812115</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"beginning of game logic, some methods in board class\">\n      <created>1673216720984</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1673216720984</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"dodanie zbijania jako możliwy ruch\">\n      <created>1673343702634</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1673343702634</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"managed exceptions\">\n      <created>1673345318090</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1673345318090</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"killing works\">\n      <created>1673444803237</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1673444803237</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"10\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"inital commit\" />\n    <MESSAGE value=\"added simple board\" />\n    <MESSAGE value=\"added basic mouse click handle\" />\n    <MESSAGE value=\"basic movement and dummy game logic\" />\n    <MESSAGE value=\"renamed client app classes\" />\n    <MESSAGE value=\"beginning of game logic, some methods in board class\" />\n    <MESSAGE value=\"dodanie zbijania jako możliwy ruch\" />\n    <MESSAGE value=\"managed exceptions\" />\n    <MESSAGE value=\"killing works\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"killing works\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -7,7 +7,6 @@
+     <list default="true" id="8d9e751d-f614-4953-834a-e8b7bf17f110" name="Changes" comment="killing works">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClassicCheckersGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClassicCheckersGameLogic.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/DummyGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/DummyGameLogic.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -41,20 +40,20 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;/home/vytax/Desktop/sem2/lista7/java/Client&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "last_opened_file_path": "/home/milosz/IdeaProjects/checkers",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/src/main/java/com/example/checkers" />
+@@ -95,7 +94,9 @@
+       <workItem from="1673217177915" duration="8000" />
+       <workItem from="1673341364823" duration="2409000" />
+       <workItem from="1673343911256" duration="3662000" />
+-      <workItem from="1673443341163" duration="2998000" />
++      <workItem from="1673443341163" duration="4047000" />
++      <workItem from="1673465490571" duration="613000" />
++      <workItem from="1673534831841" duration="689000" />
+     </task>
+     <task id="LOCAL-00001" summary="inital commit">
+       <created>1670880543562</created>
+@@ -160,7 +161,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1673444803237</updated>
+     </task>
+-    <option name="localTasksCounter" value="10" />
++    <task id="LOCAL-00010" summary="killing works">
++      <created>1673446375815</created>
++      <option name="number" value="00010" />
++      <option name="presentableId" value="LOCAL-00010" />
++      <option name="project" value="LOCAL" />
++      <updated>1673446375815</updated>
++    </task>
++    <option name="localTasksCounter" value="11" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+Index: src/main/java/com/example/checkers/ClassicCheckersGameLogic.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.checkers;\n\nimport java.util.ArrayList;\n\npublic class ClassicCheckersGameLogic extends GameLogic {\n\n    private Board gameBoard;\n    private Tile[][] tiles;\n\n    private int totalMoves = 0;\n    private final int maximumMoves = 100;\n\n    private ArrayList<Piece> blackPieces;\n    private ArrayList<Piece> whitePieces;\n\n    private PieceColor winner = null;\n\n\n    public ClassicCheckersGameLogic(Board board) {\n        this.gameBoard = board;\n        tiles = gameBoard.getTiles();\n    }\n\n    @Override\n    public void initialize() {\n        whitePieces = new ArrayList<>();\n        blackPieces = new ArrayList<>();\n        for (int i = 0; i < tiles.length; i++)\n            for (int j = 0; j < tiles[0].length; j++) {\n                if (tiles[i][j].hasPiece()) {\n                    tiles[i][j].removePiece();\n                }\n                if (j <= 2 && tiles[i][j].isPlayable()) {\n                    Piece newPiece = new Piece(PieceColor.BLACK);\n                    tiles[i][j].placePiece(newPiece);\n                    blackPieces.add(newPiece);\n                }\n\n                if (j >= 5 && tiles[i][j].isPlayable()) {\n                    Piece newPiece = new Piece(PieceColor.WHITE);\n                    tiles[i][j].placePiece(newPiece);\n                    whitePieces.add(newPiece);\n                }\n            }\n    }\n\n    public ArrayList<Tile> getPossibleMoves(Tile tile) {\n        int tileX = tile.getX();\n        int tileY = tile.getY();\n        boolean possibleKill = false;\n        ArrayList<Tile> possibleMoves = new ArrayList<>();\n        try {\n            Tile current = tiles[tileX - 1][tileY - 1];\n            if (current.hasPiece()) {\n                if (gameBoard.getNeighbor(current, -1, -1) != null &&\n                        !gameBoard.getNeighbor(current, -1, -1).hasPiece() &&\n                        current.getPieceColor() != tile.getPieceColor()) {\n                    possibleMoves.add(gameBoard.getNeighbor(current, -1, -1));\n                    possibleKill = true;\n                }\n            }\n        } catch (Exception ignored) {\n        }\n        try {\n            Tile current = tiles[tileX - 1][tileY + 1];\n            if (current.hasPiece()) {\n                if (gameBoard.getNeighbor(current, -1, +1) != null &&\n                        !gameBoard.getNeighbor(current, -1, +1).hasPiece() &&\n                        current.getPieceColor() != tile.getPieceColor()) {\n                    possibleMoves.add(gameBoard.getNeighbor(current, -1, +1));\n                    possibleKill = true;\n                }\n            }\n        } catch (Exception ignored) {\n        }\n        try {\n            Tile current = tiles[tileX + 1][tileY - 1];\n            if (current.hasPiece()) {\n                if (gameBoard.getNeighbor(current, +1, -1) != null &&\n                        !gameBoard.getNeighbor(current, +1, -1).hasPiece() &&\n                        current.getPieceColor() != tile.getPieceColor()) {\n                    possibleMoves.add(gameBoard.getNeighbor(current, +1, -1));\n                    possibleKill = true;\n                }\n            }\n        } catch (Exception ignored) {\n        }\n        try {\n            Tile current = tiles[tileX + 1][tileY + 1];\n            if (current.hasPiece()) {\n                if (gameBoard.getNeighbor(current, +1, +1) != null &&\n                        !gameBoard.getNeighbor(current, +1, +1).hasPiece() &&\n                        current.getPieceColor() != tile.getPieceColor()) {\n                    possibleMoves.add(gameBoard.getNeighbor(current, +1, +1));\n                    possibleKill = true;\n                }\n            }\n        } catch (Exception ignored) {\n        }\n        if (!possibleKill) {\n            if (tile.getPieceColor() == PieceColor.WHITE) {\n                try {\n                    possibleMoves.add(tiles[tileX - 1][tileY - 1]);\n                } catch (Exception ignored) {\n                }\n                try {\n                    possibleMoves.add(tiles[tileX + 1][tileY - 1]);\n                } catch (Exception ignored) {\n                }\n            } else {\n                try {\n                    possibleMoves.add(tiles[tileX + 1][tileY + 1]);\n                } catch (Exception ignored) {\n                }\n                try {\n                    possibleMoves.add(tiles[tileX - 1][tileY + 1]);\n                } catch (Exception ignored) {\n                }\n            }\n            possibleMoves.removeIf(Tile::hasPiece);\n        }\n        return possibleMoves;\n    }\n\n    public void makeMove(Tile from, Tile to) {\n        Piece piece = from.getPiece();\n        if (Math.abs(from.getX() - to.getX()) > 1) {\n            tiles[(from.getX() + to.getX()) / 2][(from.getY() + to.getY()) / 2].removePiece();\n\n        }\n        from.removePiece();\n        to.placePiece(piece);\n        totalMoves++;\n        if (totalMoves >= maximumMoves) {\n            winner = to.getPieceColor();\n        }\n    }\n\n    public boolean checkWinner() {\n        return winner != null;\n    }\n\n    public PieceColor getWinner() {\n        return winner;\n    }\n}\n
+===================================================================
+diff --git a/src/main/java/com/example/checkers/ClassicCheckersGameLogic.java b/src/main/java/com/example/checkers/ClassicCheckersGameLogic.java
+--- a/src/main/java/com/example/checkers/ClassicCheckersGameLogic.java	
++++ b/src/main/java/com/example/checkers/ClassicCheckersGameLogic.java	
+@@ -2,7 +2,7 @@
+ 
+ import java.util.ArrayList;
+ 
+-public class ClassicCheckersGameLogic extends GameLogic {
++public class ClassicCheckersGameLogic extends GameLogic{
+ 
+     private Board gameBoard;
+     private Tile[][] tiles;
+@@ -107,9 +107,10 @@
+                     possibleMoves.add(tiles[tileX + 1][tileY - 1]);
+                 } catch (Exception ignored) {
+                 }
+-            } else {
++            }
++            else{
+                 try {
+-                    possibleMoves.add(tiles[tileX + 1][tileY + 1]);
++                    possibleMoves.add(tiles[tileX + 1 ][tileY + 1]);
+                 } catch (Exception ignored) {
+                 }
+                 try {
+@@ -124,9 +125,8 @@
+ 
+     public void makeMove(Tile from, Tile to) {
+         Piece piece = from.getPiece();
+-        if (Math.abs(from.getX() - to.getX()) > 1) {
+-            tiles[(from.getX() + to.getX()) / 2][(from.getY() + to.getY()) / 2].removePiece();
+-
++        if(Math.abs(from.getX()-to.getX())>1) {
++            tiles[(from.getX() + to.getX())/2][(from.getY() + to.getY())/2].removePiece();
+         }
+         from.removePiece();
+         to.placePiece(piece);
