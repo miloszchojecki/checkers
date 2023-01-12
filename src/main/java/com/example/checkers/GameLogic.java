@@ -2,8 +2,7 @@ package com.example.checkers;
 
 import java.util.ArrayList;
 
-public abstract class GameLogic
-{
+public abstract class GameLogic {
 
     protected Board gameBoard;
     protected Tile[][] tiles;
@@ -12,36 +11,29 @@ public abstract class GameLogic
 
     protected PieceColor winner = null;
 
-    protected void changeTurn()
-    {
-        if(turn == PieceColor.BLACK)
+    protected void changeTurn() {
+        if (turn == PieceColor.BLACK)
             turn = PieceColor.WHITE;
         else
             turn = PieceColor.BLACK;
     }
 
-    protected Tile coordinatesToTile(TileCoordinates coordinates)
-    {
+    protected Tile coordinatesToTile(TileCoordinates coordinates) {
         return tiles[coordinates.getX()][coordinates.getY()];
     }
 
-    protected ArrayList<TileCoordinates> tilesToCoordinates(ArrayList<Tile> tiles)
-    {
+    protected ArrayList<TileCoordinates> tilesToCoordinates(ArrayList<Tile> tiles) {
         ArrayList<TileCoordinates> tileCoordinates = new ArrayList<>();
-        for(Tile tile : tiles)
-        {
+        for (Tile tile : tiles) {
             tileCoordinates.add(new TileCoordinates(tile));
         }
         return tileCoordinates;
     }
-
-    public PieceColor getTurn()
-    {
+    public PieceColor getTurn() {
         return turn;
     }
 
-    public PieceColor getWinner()
-    {
+    public PieceColor getWinner() {
         return winner;
     }
 
@@ -52,8 +44,8 @@ public abstract class GameLogic
     public abstract MoveInfo makeMove(TileCoordinates from, TileCoordinates to);
 
     //public abstract boolean checkWinner();
-    public Tile[][] getTiles()
-    {
+    public Tile[][] getTiles() {
         return tiles;
     }
+
 }

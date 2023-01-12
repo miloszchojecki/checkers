@@ -87,6 +87,7 @@ public class DummyGameLogic extends GameLogic
         return tilesToCoordinates(possibleMoves);
     }
 
+
     public MoveInfo makeMove(TileCoordinates fromCoordinates, TileCoordinates toCoordinates)
     {
         if(!getPossibleMoves(fromCoordinates).contains(toCoordinates))

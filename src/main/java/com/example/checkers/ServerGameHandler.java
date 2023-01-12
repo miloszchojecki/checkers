@@ -51,6 +51,7 @@ public class ServerGameHandler
             if(message.charAt(0) == 's')
             {
                 TileCoordinates selectedTileCoordinates = serverCommunicator.getSelectedTile(message);
+
                 ArrayList<TileCoordinates> possibleMoves = gameLogic.getPossibleMoves(selectedTileCoordinates);
                 serverCommunicator.sendPossibleMoves(gameLogic.getTurn(), possibleMoves);
             }
