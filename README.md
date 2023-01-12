@@ -4,11 +4,17 @@ Gra w warcaby oparta o klient-serwer
 Dostępne rodzaje gier i zasady:
 
 Szachy angielskie:
+
 -Plansza
+
   8x8, gracze poruszają się po ciemnych polach
+  
 -Pionki
+
   Gracze mają po 12 pionków. 
+  
 -Bicie
+
   Bicie jest obowiązkowe, ale możliwe w przypadku zwykłych pionków tylko w przód. Gracz nie ma obowiązku 
   zbicia największej możliwej liczby pionków, może wybrać dowolne bicie. 
 -Damka
