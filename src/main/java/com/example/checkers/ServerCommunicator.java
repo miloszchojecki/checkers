@@ -1,6 +1,7 @@
 package com.example.checkers;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
@@ -13,6 +14,7 @@ public class ServerCommunicator
     qxy - make piece on x,y queen
     tc - turn of player of color c
     wc - player c wins
+    xab - move possible to a,b
 
     in:
     sxy - selected tile x,y
@@ -65,6 +67,32 @@ public class ServerCommunicator
         }
     }
 
+    public Command getCommand(PieceColor client)
+    {
+        BufferedReader in = getPlayerInput(client);
+        try
+        {
+            String message = in.readLine();
+            if (message.charAt(0) == 's')
+            {
+                TileCoordinates selectedTileCoordinates = getSelectedTile(message);
+                return new Command(CommandType.SELECT, selectedTileCoordinates);
+            }
+            else if (message.charAt(0) == 'm')
+            {
+                TileCoordinates moveFromCoordinates = getFromCoordinates(message);
+                TileCoordinates moveToCoordinates = getToCoordinates(message);
+                return new Command(CommandType.MOVE, moveFromCoordinates, moveToCoordinates);
+            }
+            else
+                return new Command(CommandType.UNKNOWN);
+        } catch (IOException e)
+        {
+            throw new RuntimeException(e);
+        }
+
+    }
+
     public void setTurn(PieceColor turn)
     {
         char playerChar = getPieceColorChar(turn);
@@ -82,7 +110,7 @@ public class ServerCommunicator
         out.println(length);
         for(TileCoordinates tile : tileCoordinates)
         {
-            message = tile.getX() + "" + tile.getY();
+            message = "x" + tile.toString();
             System.out.println(message);
             out.println(message);
         }
@@ -138,20 +166,20 @@ public class ServerCommunicator
     {
         if(message.charAt(0) != 's')
             return null;
-        return new TileCoordinates(message.charAt(1), message.charAt(2));
+        return new TileCoordinates(Integer.parseInt(String.valueOf(message.charAt(1))), Integer.parseInt(String.valueOf(message.charAt(2))));
     }
 
     public TileCoordinates getFromCoordinates(String message)
     {
         if(message.charAt(0) != 'm')
             return null;
-        return new TileCoordinates(message.charAt(1), message.charAt(2));
+        return new TileCoordinates(Integer.parseInt(String.valueOf(message.charAt(1))), Integer.parseInt(String.valueOf(message.charAt(2))));
     }
 
     public TileCoordinates getToCoordinates(String message)
     {
         if(message.charAt(0) != 'm')
             return null;
-        return new TileCoordinates(message.charAt(3), message.charAt(4));
+        return new TileCoordinates(Integer.parseInt(String.valueOf(message.charAt(3))), Integer.parseInt(String.valueOf(message.charAt(4))));
     }
 }

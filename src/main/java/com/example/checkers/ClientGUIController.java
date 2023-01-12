@@ -1,5 +1,6 @@
 package com.example.checkers;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -35,17 +36,25 @@ public class ClientGUIController implements Initializable
     private Socket socket;
     BufferedReader serverInput;
     PrintWriter serverOutput;
+    int clientNumber;
+    Board gameBoard;
+    ClientGameHandler clientGameHandler;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+        gameBoard = new Board();
+        vbox.getChildren().add(gameBoard.getGridPane());
+        startButton.setOnAction(actionEvent -> startButtonHandler());
+
         try
         {
             socket = new Socket("localhost", 4444);
             serverInput = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             serverOutput = new PrintWriter(socket.getOutputStream(), true);
 
-            int clientNumber = Integer.parseInt(serverInput.readLine());
+            clientNumber = Integer.parseInt(serverInput.readLine());
+
 
             if(clientNumber == 1)
             {
@@ -56,26 +65,25 @@ public class ClientGUIController implements Initializable
                 label.setText(TextStrings.youAreSecondPlayer);
                 choiceBox.setVisible(false);
                 startButton.setVisible(false);
+                startGame();
             }
         }
         catch (IOException e)
         {
             throw new RuntimeException(e);
         }
-
-        Board gameBoard = new Board();
-        vbox.getChildren().add(gameBoard.getGridPane());
-        startButton.setOnAction(actionEvent -> startButtonHandler());
     }
 
     void startButtonHandler()
     {
-        newGame();
-        //startButton.setDisable(true);
+        serverOutput.println(1);
+        startButton.setDisable(true);
+        startGame();
     }
 
-    void newGame()
+    void startGame()
     {
-        game.startGame();
+        clientGameHandler = new ClientGameHandler(clientNumber, gameBoard, label, new ClientCommunicator(serverInput, serverOutput));
+        clientGameHandler.update();
     }
 }

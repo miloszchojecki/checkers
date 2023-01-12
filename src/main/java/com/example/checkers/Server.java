@@ -36,7 +36,8 @@ public class Server
 
             GameLogic gameLogic = new DummyGameLogic(new Board());
 
-            ServerGameHandler game = new ServerGameHandler(gameLogic, firstInput, firstOutput, secondInput, secondOutput);
+            ServerGameHandler serverGameHandler = new ServerGameHandler(gameLogic, firstInput, firstOutput, secondInput, secondOutput);
+            serverGameHandler.playGame();
         }
         catch (IOException e)
         {

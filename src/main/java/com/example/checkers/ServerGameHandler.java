@@ -38,7 +38,7 @@ public class ServerGameHandler
         return (player == PieceColor.WHITE ? firstOutput : secondOutput);
     }
 
-    public void playGame() throws IOException
+    public void playGame()
     {
         gameLogic.initialize();
         serverCommunicator.initialize(gameLogic.getTiles());
@@ -46,24 +46,24 @@ public class ServerGameHandler
 
         while (true)
         {
-            BufferedReader in = getPlayerInput(gameLogic.getTurn());
-            String message = in.readLine();
-            if(message.charAt(0) == 's')
-            {
-                TileCoordinates selectedTileCoordinates = serverCommunicator.getSelectedTile(message);
-                ArrayList<TileCoordinates> possibleMoves = gameLogic.getPossibleMoves(selectedTileCoordinates);
-                serverCommunicator.sendPossibleMoves(gameLogic.getTurn(), possibleMoves);
-            }
-            else if(message.charAt(0) == 'm')
-            {
-                TileCoordinates moveFromCoordinates = serverCommunicator.getFromCoordinates(message);
-                TileCoordinates moveToCoordinates = serverCommunicator.getToCoordinates(message);
-                MoveInfo moveInfo = gameLogic.makeMove(moveFromCoordinates, moveToCoordinates);
-                if(moveInfo != null)
+                Command command = serverCommunicator.getCommand(gameLogic.getTurn());
+                if (command.getCommandType() == CommandType.SELECT)
                 {
-                    serverCommunicator.sendMoveInfo(moveFromCoordinates, moveToCoordinates, moveInfo);
+                    TileCoordinates selectedTileCoordinates = command.getCoordinates();
+                    ArrayList<TileCoordinates> possibleMoves = gameLogic.getPossibleMoves(selectedTileCoordinates);
+                    serverCommunicator.sendPossibleMoves(gameLogic.getTurn(), possibleMoves);
                 }
-            }
+                else if (command.getCommandType() == CommandType.MOVE)
+                {
+                    TileCoordinates moveFromCoordinates = command.getCoordinates();
+                    TileCoordinates moveToCoordinates = command.getNextCoordinates();
+                    MoveInfo moveInfo = gameLogic.makeMove(moveFromCoordinates, moveToCoordinates);
+                    System.out.println("test");
+                    if (moveInfo != null)
+                    {
+                        serverCommunicator.sendMoveInfo(moveFromCoordinates, moveToCoordinates, moveInfo);
+                    }
+                }
         }
     }
 }
