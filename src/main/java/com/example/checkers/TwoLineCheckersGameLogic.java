@@ -2,8 +2,7 @@ package com.example.checkers;
 
 import java.util.ArrayList;
 
-public class ClassicCheckersGameLogic extends GameLogic {
-
+public class TwoLineCheckersGameLogic extends GameLogic {
     private Board gameBoard;
     private Tile[][] tiles;
 
@@ -16,7 +15,7 @@ public class ClassicCheckersGameLogic extends GameLogic {
     private PieceColor winner = null;
 
 
-    public ClassicCheckersGameLogic(Board board) {
+    public TwoLineCheckersGameLogic(Board board) {
         this.gameBoard = board;
         tiles = gameBoard.getTiles();
     }
@@ -30,13 +29,13 @@ public class ClassicCheckersGameLogic extends GameLogic {
                 if (tiles[i][j].hasPiece()) {
                     tiles[i][j].removePiece();
                 }
-                if (j <= 2 && tiles[i][j].isPlayable()) {
+                if (j <= 1 && tiles[i][j].isPlayable()) {
                     Piece newPiece = new Piece(PieceColor.BLACK);
                     tiles[i][j].placePiece(newPiece);
                     blackPieces.add(newPiece);
                 }
 
-                if (j >= 5 && tiles[i][j].isPlayable()) {
+                if (j >= 6 && tiles[i][j].isPlayable()) {
                     Piece newPiece = new Piece(PieceColor.WHITE);
                     tiles[i][j].placePiece(newPiece);
                     whitePieces.add(newPiece);
@@ -47,11 +46,6 @@ public class ClassicCheckersGameLogic extends GameLogic {
     @Override
     public ArrayList<TileCoordinates> getPossibleMoves(TileCoordinates tile) {
         if (coordinatesToTile(tile).getPiece().isQueen()) {
-            boolean possibleKill = false;
-            ArrayList<Tile> possibleMoves = new ArrayList<>();
-            Tile thisTile = coordinatesToTile(tile);
-            return tilesToCoordinates(possibleMoves);
-        } else {
             boolean possibleKill = false;
             ArrayList<Tile> possibleMoves = new ArrayList<>();
             Tile thisTile = coordinatesToTile(tile);
@@ -127,6 +121,87 @@ public class ClassicCheckersGameLogic extends GameLogic {
             }
             return tilesToCoordinates(possibleMoves);
         }
+
+        else {
+            boolean possibleKill = false;
+            ArrayList<Tile> possibleMoves = new ArrayList<>();
+            Tile thisTile = coordinatesToTile(tile);
+            if (thisTile.getPieceColor() == PieceColor.WHITE) {
+                try {
+                    Tile current = tiles[tile.getX() - 1][tile.getY() + 1];
+                    if (current.hasPiece()) {
+                        if (gameBoard.getNeighbor(current, -1, +1) != null &&
+                                !gameBoard.getNeighbor(current, -1, +1).hasPiece() &&
+                                current.getPieceColor() != thisTile.getPieceColor()) {
+                            possibleMoves.add(gameBoard.getNeighbor(current, -1, +1));
+                            possibleKill = true;
+                        }
+                    }
+                } catch (Exception ignored) {
+                }
+                try {
+                    Tile current = tiles[tile.getX() + 1][tile.getY() + 1];
+                    if (current.hasPiece()) {
+                        if (gameBoard.getNeighbor(current, +1, +1) != null &&
+                                !gameBoard.getNeighbor(current, +1, +1).hasPiece() &&
+                                current.getPieceColor() != thisTile.getPieceColor()) {
+                            possibleMoves.add(gameBoard.getNeighbor(current, +1, +1));
+                            possibleKill = true;
+                        }
+                    }
+                } catch (Exception ignored) {
+                }
+            } else {
+                try {
+                    Tile current = tiles[tile.getX() - 1][tile.getY() - 1];
+                    if (current.hasPiece()) {
+                        if (gameBoard.getNeighbor(current, -1, -1) != null &&
+                                !gameBoard.getNeighbor(current, -1, -1).hasPiece() &&
+                                current.getPieceColor() != thisTile.getPieceColor()) {
+                            possibleMoves.add(gameBoard.getNeighbor(current, -1, -1));
+                            possibleKill = true;
+                        }
+                    }
+                } catch (Exception ignored) {
+                }
+
+                try {
+                    Tile current = tiles[tile.getX() + 1][tile.getY() - 1];
+                    if (current.hasPiece()) {
+                        if (gameBoard.getNeighbor(current, +1, -1) != null &&
+                                !gameBoard.getNeighbor(current, +1, -1).hasPiece() &&
+                                current.getPieceColor() != thisTile.getPieceColor()) {
+                            possibleMoves.add(gameBoard.getNeighbor(current, +1, -1));
+                            possibleKill = true;
+                        }
+                    }
+                } catch (Exception ignored) {
+                }
+            }
+            if (!possibleKill) {
+                if (thisTile.getPieceColor() == PieceColor.BLACK) {
+                    try {
+                        possibleMoves.add(tiles[tile.getX() - 1][tile.getY() - 1]);
+                    } catch (Exception ignored) {
+                    }
+                    try {
+                        possibleMoves.add(tiles[tile.getX() + 1][tile.getY() - 1]);
+                    } catch (Exception ignored) {
+                    }
+                } else {
+                    try {
+                        possibleMoves.add(tiles[tile.getX() + 1][tile.getY() + 1]);
+                    } catch (Exception ignored) {
+                    }
+                    try {
+                        possibleMoves.add(tiles[tile.getX() - 1][tile.getY() + 1]);
+                    } catch (Exception ignored) {
+                    }
+                }
+                possibleMoves.removeIf(Tile::hasPiece);
+            }
+            return tilesToCoordinates(possibleMoves);
+        }
     }
 
 
@@ -172,7 +247,8 @@ public class ClassicCheckersGameLogic extends GameLogic {
         return new MoveInfo(to.getPieceColor(), turn, killed, queen, winner);
     }
 
-    private boolean isKillPossible(TileCoordinates tile) {
+    @Override
+    public boolean isKillPossible(TileCoordinates tile) {
         boolean possibleKill = false;
         Tile thisTile = coordinatesToTile(tile);
         try {
@@ -226,4 +302,3 @@ public class ClassicCheckersGameLogic extends GameLogic {
         return possibleKill;
     }
 }
-

@@ -43,6 +43,8 @@ public abstract class GameLogic {
 
     public abstract MoveInfo makeMove(TileCoordinates from, TileCoordinates to);
 
+    public abstract boolean isKillPossible(TileCoordinates tile);
+
     //public abstract boolean checkWinner();
     public Tile[][] getTiles() {
         return tiles;
