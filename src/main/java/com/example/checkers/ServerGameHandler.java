@@ -5,37 +5,65 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.ArrayList;
 
-public class ServerGameHandler implements Runnable
+public class ServerGameHandler
 {
-    private Socket firstPlayer;
-    private Socket secondPlayer;
-
     BufferedReader firstInput, secondInput;
     PrintWriter firstOutput, secondOutput;
 
-    public ServerGameHandler(Socket firstPlayer, Socket secondPlayer)
-    {
-        try
-        {
-            this.firstPlayer = firstPlayer;
-            this.secondPlayer = secondPlayer;
-            firstInput = new BufferedReader(new InputStreamReader(firstPlayer.getInputStream()));
-            secondInput = new BufferedReader(new InputStreamReader(secondPlayer.getInputStream()));
-            firstOutput = new PrintWriter(firstPlayer.getOutputStream(), true);
-            secondOutput = new PrintWriter(secondPlayer.getOutputStream(), true);
-            firstOutput.println("1");
-            secondOutput.println("2");
-        } catch (IOException e)
-        {
-            System.out.println(e.getMessage());
-        }
+    GameLogic gameLogic;
 
+    ServerCommunicator serverCommunicator;
+
+    PieceColor turn;
+
+    public ServerGameHandler(GameLogic gameLogic, BufferedReader firstInput, PrintWriter firstOutput, BufferedReader secondInput, PrintWriter secondOutput)
+    {
+            this.gameLogic = gameLogic;
+            this.firstInput = firstInput;
+            this.firstOutput = firstOutput;
+            this.secondInput = secondInput;
+            this.secondOutput = secondOutput;
+            serverCommunicator = new ServerCommunicator(firstInput, firstOutput, secondInput, secondOutput);
     }
 
-    @Override
-    public void run()
+    private BufferedReader getPlayerInput(PieceColor player)
     {
+        return (player == PieceColor.WHITE ? firstInput : secondInput);
+    }
 
+    private PrintWriter getPlayerOutput(PieceColor player)
+    {
+        return (player == PieceColor.WHITE ? firstOutput : secondOutput);
+    }
+
+    public void playGame() throws IOException
+    {
+        gameLogic.initialize();
+        serverCommunicator.initialize(gameLogic.getTiles());
+        serverCommunicator.setTurn(gameLogic.getTurn());
+
+        while (true)
+        {
+            BufferedReader in = getPlayerInput(gameLogic.getTurn());
+            String message = in.readLine();
+            if(message.charAt(0) == 's')
+            {
+                TileCoordinates selectedTileCoordinates = serverCommunicator.getSelectedTile(message);
+                ArrayList<TileCoordinates> possibleMoves = gameLogic.getPossibleMoves(selectedTileCoordinates);
+                serverCommunicator.sendPossibleMoves(gameLogic.getTurn(), possibleMoves);
+            }
+            else if(message.charAt(0) == 'm')
+            {
+                TileCoordinates moveFromCoordinates = serverCommunicator.getFromCoordinates(message);
+                TileCoordinates moveToCoordinates = serverCommunicator.getToCoordinates(message);
+                MoveInfo moveInfo = gameLogic.makeMove(moveFromCoordinates, moveToCoordinates);
+                if(moveInfo != null)
+                {
+                    serverCommunicator.sendMoveInfo(moveFromCoordinates, moveToCoordinates, moveInfo);
+                }
+            }
+        }
     }
 }

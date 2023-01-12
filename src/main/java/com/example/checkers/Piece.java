@@ -1,15 +1,21 @@
 package com.example.checkers;
 
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
 public class Piece
 {
     PieceColor pieceColor;
-    Circle circle;
 
-    private final Color blackCircleColor = Color.BLACK;
-    private final Color whiteCircleColor = Color.WHITE;
+    StackPane stackPane;
+    Circle outerCircle, innerCircle;
+
+    private boolean isQueen = false;
+
+    private final Color blackCircleColor = ColorSet.blackPieceColor;
+    private final Color whiteCircleColor = ColorSet.whitePieceColor;
+    private final Color innerCircleColor = ColorSet.queenPieceColor;;
 
     private final int radius = 40;
 
@@ -17,18 +23,35 @@ public class Piece
     {
         this.pieceColor = pieceColor;
         if(pieceColor == PieceColor.BLACK)
-            circle = new Circle(radius, blackCircleColor);
+        {
+            outerCircle = new Circle(radius, blackCircleColor);
+        }
         else
-            circle = new Circle(radius, whiteCircleColor);
+        {
+            outerCircle = new Circle(radius, whiteCircleColor);
+        }
+        stackPane = new StackPane(outerCircle);
     }
 
-    public Circle getCircle()
+    public StackPane getCircleStackPane()
     {
-        return circle;
+        return stackPane;
     }
 
     public PieceColor getPieceColor()
     {
         return pieceColor;
+    }
+
+    public boolean isQueen()
+    {
+        return isQueen;
+    }
+
+    public void makeQueen()
+    {
+        innerCircle = new Circle(radius * 0.5, innerCircleColor);
+        stackPane.getChildren().add(innerCircle);
+        isQueen = true;
     }
 }

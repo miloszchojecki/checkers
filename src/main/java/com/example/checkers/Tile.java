@@ -19,7 +19,7 @@ public class Tile
     private final StackPane stackPane;
     private final Rectangle rectangle;
     private Piece piece;
-    private Circle circle;
+    private StackPane circleStackPane;
     private boolean playable;
 
     private final int x;
@@ -85,14 +85,14 @@ public class Tile
     public void placePiece(Piece piece)
     {
         this.piece = piece;
-        this.circle = piece.getCircle();
-        stackPane.getChildren().add(circle);
+        this.circleStackPane = piece.getCircleStackPane();
+        stackPane.getChildren().add(circleStackPane);
     }
 
     public void removePiece()
     {
-        stackPane.getChildren().remove(circle);
-        circle = null;
+        stackPane.getChildren().remove(circleStackPane);
+        circleStackPane = null;
         piece = null;
     }
 

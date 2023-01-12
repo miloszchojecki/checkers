@@ -2,143 +2,116 @@ package com.example.checkers;
 
 import java.util.ArrayList;
 
-public class DummyGameLogic extends GameLogic {
-    private Board gameBoard;
-    private Tile[][] tiles;
+public class DummyGameLogic extends GameLogic
+{
+
 
     private int totalMoves = 0;
-    private final int maximumMoves = 50;
+    private final int maximumMoves = 10;
 
     private ArrayList<Piece> blackPieces;
     private ArrayList<Piece> whitePieces;
 
-    private PieceColor winner = null;
-
-
-    public DummyGameLogic(Board board) {
+    public DummyGameLogic(Board board)
+    {
         this.gameBoard = board;
         tiles = gameBoard.getTiles();
+        turn = PieceColor.WHITE;
     }
 
     @Override
-    public void initialize() {
+    public void initialize()
+    {
         whitePieces = new ArrayList<>();
         blackPieces = new ArrayList<>();
         for (int i = 0; i < tiles.length; i++)
-            for (int j = 0; j < tiles[0].length; j++) {
-                if (tiles[i][j].hasPiece()) {
+            for (int j = 0; j < tiles[0].length; j++)
+            {
+                if (tiles[i][j].hasPiece())
+                {
                     tiles[i][j].removePiece();
                 }
-                if (j <= 2 && tiles[i][j].isPlayable()) {
+                if (j <= 2 && tiles[i][j].isPlayable())
+                {
                     Piece newPiece = new Piece(PieceColor.BLACK);
                     tiles[i][j].placePiece(newPiece);
+                    tiles[i][j].getPiece().makeQueen();
                     blackPieces.add(newPiece);
                 }
 
-                if (j >= 5 && tiles[i][j].isPlayable()) {
+                if (j >= 5 && tiles[i][j].isPlayable())
+                {
                     Piece newPiece = new Piece(PieceColor.WHITE);
                     tiles[i][j].placePiece(newPiece);
+                    tiles[i][j].getPiece().makeQueen();
                     whitePieces.add(newPiece);
                 }
             }
     }
 
-    public ArrayList<Tile> getPossibleMoves(Tile tile) {
+    public ArrayList<TileCoordinates> getPossibleMoves(TileCoordinates tileCoordinates)
+    {
+        Tile tile = coordinatesToTile(tileCoordinates);
         int tileX = tile.getX();
         int tileY = tile.getY();
-        boolean possibleKill = false;
         ArrayList<Tile> possibleMoves = new ArrayList<>();
-        try {
-            Tile current = tiles[tileX - 1][tileY - 1];
-            if (current.hasPiece()) {
-                if (gameBoard.getNeighbor(current, -1, -1) != null &&
-                        !gameBoard.getNeighbor(current, -1, -1).hasPiece() &&
-                        current.getPieceColor() != tile.getPieceColor()) {
-                    possibleMoves.add(gameBoard.getNeighbor(current, -1, -1));
-                    possibleKill = true;
-                }
-            }
-        } catch (Exception ignored) {
+        try
+        {
+            possibleMoves.add(tiles[tileX - 1][tileY - 1]);
         }
-        try {
-            Tile current = tiles[tileX - 1][tileY + 1];
-            if (current.hasPiece()) {
-                if (gameBoard.getNeighbor(current, -1, +1) != null &&
-                        !gameBoard.getNeighbor(current, -1, +1).hasPiece() &&
-                        current.getPieceColor() != tile.getPieceColor()) {
-                    possibleMoves.add(gameBoard.getNeighbor(current, -1, +1));
-                    possibleKill = true;
-                }
-            }
-        } catch (Exception ignored) {
+        catch (Exception ignored)
+        {
         }
-        try {
-            Tile current = tiles[tileX + 1][tileY - 1];
-            if (current.hasPiece()) {
-                if (gameBoard.getNeighbor(current, +1, -1) != null &&
-                        !gameBoard.getNeighbor(current, +1, -1).hasPiece() &&
-                        current.getPieceColor() != tile.getPieceColor()) {
-                    possibleMoves.add(gameBoard.getNeighbor(current, +1, -1));
-                    possibleKill = true;
-                }
-            }
-        } catch (Exception ignored) {
+        try
+        {
+            possibleMoves.add(tiles[tileX - 1][tileY + 1]);
         }
-        try {
-            Tile current = tiles[tileX + 1][tileY + 1];
-            if (current.hasPiece()) {
-                if (gameBoard.getNeighbor(current, +1, +1) != null &&
-                        !gameBoard.getNeighbor(current, +1, +1).hasPiece() &&
-                        current.getPieceColor() != tile.getPieceColor()) {
-                    possibleMoves.add(gameBoard.getNeighbor(current, +1, +1));
-                    possibleKill = true;
-                }
-            }
-        } catch (Exception ignored) {
+        catch (Exception ignored)
+        {
         }
-        if (!possibleKill) {
-            if (tile.getPieceColor() == PieceColor.WHITE) {
-                try {
-                    possibleMoves.add(tiles[tileX - 1][tileY - 1]);
-                } catch (Exception ignored) {
-                }
-                try {
-                    possibleMoves.add(tiles[tileX + 1][tileY - 1]);
-                } catch (Exception ignored) {
-                }
-            } else {
-                try {
-                    possibleMoves.add(tiles[tileX + 1][tileY + 1]);
-                } catch (Exception ignored) {
-                }
-                try {
-                    possibleMoves.add(tiles[tileX - 1][tileY + 1]);
-                } catch (Exception ignored) {
-                }
-            }
-            possibleMoves.removeIf(Tile::hasPiece);
+        try
+        {
+            possibleMoves.add(tiles[tileX + 1][tileY - 1]);
         }
-        return possibleMoves;
+        catch (Exception ignored)
+        {
+        }
+        try
+        {
+            possibleMoves.add(tiles[tileX + 1][tileY + 1]);
+        }
+        catch (Exception ignored)
+        {
+        }
+        possibleMoves.removeIf(Tile::hasPiece);
+        return tilesToCoordinates(possibleMoves);
     }
 
-    public void makeMove(Tile from, Tile to) {
+    public MoveInfo makeMove(TileCoordinates fromCoordinates, TileCoordinates toCoordinates)
+    {
+        if(!getPossibleMoves(fromCoordinates).contains(toCoordinates))
+            return null;
+
+        Tile from = coordinatesToTile(fromCoordinates);
+        Tile to = coordinatesToTile(toCoordinates);
+
         Piece piece = from.getPiece();
-        if (Math.abs(from.getX() - to.getX()) > 1) {
-            tiles[(from.getX() + to.getX()) / 2][(from.getY() + to.getY()) / 2].removePiece();
-        }
         from.removePiece();
         to.placePiece(piece);
         totalMoves++;
-        if (totalMoves >= maximumMoves) {
-            winner = to.getPieceColor();
+        if (totalMoves >= maximumMoves)
+        {
+            winner = turn;
         }
+        changeTurn();
+        return new MoveInfo(to.getPieceColor(), turn, null, false, winner);
     }
 
-    public boolean checkWinner() {
+    //do usuniecia
+    public boolean checkWinner()
+    {
         return winner != null;
     }
 
-    public PieceColor getWinner() {
-        return winner;
-    }
+
 }
