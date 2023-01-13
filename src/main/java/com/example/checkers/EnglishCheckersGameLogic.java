@@ -3,8 +3,6 @@ package com.example.checkers;
 import java.util.ArrayList;
 
 public class EnglishCheckersGameLogic extends GameLogic {
-    private Board gameBoard;
-    private Tile[][] tiles;
 
     private int totalMoves = 0;
     private final int maximumMoves = 100;

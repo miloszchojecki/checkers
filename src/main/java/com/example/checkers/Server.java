@@ -30,11 +30,12 @@ public class Server
             firstOutput.println("1");
             secondOutput.println("2");
 
-            String gameModeString = firstInput.readLine();
+            String gameMode = firstInput.readLine();
 
-            int gameMode = Integer.parseInt(gameModeString);
+            GameLogicFactory gameLogicFactory = new GameLogicFactory(new Board());
+            GameLogic gameLogic = gameLogicFactory.getGameLogic(gameMode);
 
-            GameLogic gameLogic = new DummyGameLogic(new Board());
+            //GameLogic gameLogic = new DummyGameLogic(new Board());
 
             ServerGameHandler serverGameHandler = new ServerGameHandler(gameLogic, firstInput, firstOutput, secondInput, secondOutput);
             serverGameHandler.playGame();

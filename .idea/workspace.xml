@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d9e751d-f614-4953-834a-e8b7bf17f110" name="Changes" comment="server communication">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClientCommunicator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/CommandType.java" afterDir="false" />
+    <list default="true" id="8d9e751d-f614-4953-834a-e8b7bf17f110" name="Changes" comment="client server working">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/GameLogicFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClientApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClientGUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClientGUIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClientGameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClientGameHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/DummyGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/DummyGameLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/EnglishCheckersGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/EnglishCheckersGameLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/GameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/GameLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ServerCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/ServerCommunicator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ServerGameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/ServerGameHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/TextStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/TextStrings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/checkers/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/checkers/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,14 +23,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -170,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673546213490</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="client server working">
+      <created>1673567303707</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673567303707</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +201,7 @@
     <MESSAGE value="start/reset button" />
     <MESSAGE value="first server commit" />
     <MESSAGE value="server communication" />
-    <option name="LAST_COMMIT_MESSAGE" value="server communication" />
+    <MESSAGE value="client server working" />
+    <option name="LAST_COMMIT_MESSAGE" value="client server working" />
   </component>
 </project>

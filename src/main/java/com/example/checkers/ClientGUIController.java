@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
@@ -29,7 +30,9 @@ public class ClientGUIController implements Initializable
     @FXML
     private Button startButton;
     @FXML
-    private ChoiceBox choiceBox;
+    private ComboBox<String> choiceBox;
+
+    private GridPane gridPane;
 
     private Game game;
 
@@ -40,11 +43,16 @@ public class ClientGUIController implements Initializable
     Board gameBoard;
     ClientGameHandler clientGameHandler;
 
+    final String[] gameModes = {"Warcaby angielskie", "Warcaby włoskie", "Warcaby dwuliniowe"};
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+        choiceBox.getItems().addAll(gameModes);
+
         gameBoard = new Board();
-        vbox.getChildren().add(gameBoard.getGridPane());
+        gridPane = gameBoard.getGridPane();
+        vbox.getChildren().add(gridPane);
         startButton.setOnAction(actionEvent -> startButtonHandler());
 
         try
@@ -65,6 +73,7 @@ public class ClientGUIController implements Initializable
                 label.setText(TextStrings.youAreSecondPlayer);
                 choiceBox.setVisible(false);
                 startButton.setVisible(false);
+                gridPane.setRotate(180);
                 startGame();
             }
         }
@@ -76,7 +85,8 @@ public class ClientGUIController implements Initializable
 
     void startButtonHandler()
     {
-        serverOutput.println(1);
+        serverOutput.println(choiceBox.getValue());
+        choiceBox.setDisable(true);
         startButton.setDisable(true);
         startGame();
     }

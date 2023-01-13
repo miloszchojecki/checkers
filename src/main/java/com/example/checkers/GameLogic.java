@@ -7,7 +7,7 @@ public abstract class GameLogic {
     protected Board gameBoard;
     protected Tile[][] tiles;
 
-    protected PieceColor turn;
+    protected PieceColor turn = PieceColor.WHITE;
 
     protected PieceColor winner = null;
 

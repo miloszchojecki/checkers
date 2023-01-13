@@ -105,7 +105,7 @@ public class DummyGameLogic extends GameLogic
             winner = turn;
         }
         changeTurn();
-        return new MoveInfo(to.getPieceColor(), turn, null, false, winner);
+        return new MoveInfo(to.getPieceColor(), turn, null, true, winner);
     }
 
     @Override
