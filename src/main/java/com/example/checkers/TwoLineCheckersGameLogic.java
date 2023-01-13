@@ -226,11 +226,11 @@ public class TwoLineCheckersGameLogic extends GameLogic {
             to.getPiece().makeQueen();
         }
         if (to.getPieceColor() == PieceColor.WHITE) {
-            if (to.getY() == 7) {
+            if (to.getY() == 0) {
                 to.getPiece().makeQueen();
             }
         } else {
-            if (to.getY() == 0) {
+            if (to.getY() == 7) {
                 to.getPiece().makeQueen();
             }
         }
