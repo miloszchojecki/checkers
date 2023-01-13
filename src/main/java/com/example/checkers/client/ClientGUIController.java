@@ -1,5 +1,7 @@
-package com.example.checkers;
+package com.example.checkers.client;
 
+import com.example.checkers.common.Board;
+import com.example.checkers.data.TextStrings;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;

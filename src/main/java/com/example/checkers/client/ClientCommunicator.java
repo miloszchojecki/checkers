@@ -1,4 +1,9 @@
-package com.example.checkers;
+package com.example.checkers.client;
+
+import com.example.checkers.common.Command;
+import com.example.checkers.common.CommandType;
+import com.example.checkers.common.PieceColor;
+import com.example.checkers.common.TileCoordinates;
 
 import java.io.BufferedReader;
 import java.io.IOException;

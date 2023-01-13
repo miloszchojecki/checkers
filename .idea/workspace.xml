@@ -4,10 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d9e751d-f614-4953-834a-e8b7bf17f110" name="Changes" comment="code cleanup">
+    <list default="true" id="8d9e751d-f614-4953-834a-e8b7bf17f110" name="Changes" comment="bug fix">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/data/ColorSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/data/TextStrings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClientGUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClientGUIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClientCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientCommunicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClientGUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientGUIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClientGameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientGameHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ColorSet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/CommandType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/CommandType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/DummyGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/DummyGameLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/EnglishCheckersGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/EnglishCheckersGameLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/GameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/GameLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/GameLogicFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/GameLogicFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ItalianCheckersGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/ItalianCheckersGameLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/MoveInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/MoveInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/Piece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/PieceColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/PieceColor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ServerCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/server/ServerCommunicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ServerGameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/server/ServerGameHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/TextStrings.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/TileCoordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/TileCoordinates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/TwoLineCheckersGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/TwoLineCheckersGameLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/checkers/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/checkers/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,11 +93,11 @@
   </component>
   <component name="RunManager" selected="Application.ClientApplication">
     <configuration name="ClientApplication" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.checkers.ClientApplication" />
+      <option name="MAIN_CLASS_NAME" value="com.example.checkers.client.ClientApplication" />
       <module name="checkers" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.checkers.*" />
+          <option name="PATTERN" value="com.example.checkers.client.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -80,11 +106,11 @@
       </method>
     </configuration>
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.checkers.Server" />
+      <option name="MAIN_CLASS_NAME" value="com.example.checkers.server.Server" />
       <module name="checkers" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.checkers.*" />
+          <option name="PATTERN" value="com.example.checkers.client.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -197,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673605343347</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="bug fix">
+      <created>1673609097698</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1673609097698</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +260,7 @@
     <MESSAGE value="gui fixes, created gamelogic factory" />
     <MESSAGE value="small fix" />
     <MESSAGE value="code cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="code cleanup" />
+    <MESSAGE value="bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
   </component>
 </project>

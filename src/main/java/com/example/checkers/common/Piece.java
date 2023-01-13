@@ -1,5 +1,6 @@
-package com.example.checkers;
+package com.example.checkers.common;
 
+import com.example.checkers.data.ColorSet;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;

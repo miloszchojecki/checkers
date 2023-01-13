@@ -1,4 +1,4 @@
-package com.example.checkers;
+package com.example.checkers.client;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +12,7 @@ public class ClientApplication extends Application
     @Override
     public void start(Stage stage) throws IOException
     {
-        FXMLLoader fxmlLoader = new FXMLLoader(ClientApplication.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(ClientApplication.class.getResource("/com/example/checkers/hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 850, 950);
         stage.setTitle("Checkers");
         stage.setResizable(false);

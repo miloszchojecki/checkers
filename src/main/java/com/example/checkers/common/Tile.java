@@ -1,10 +1,11 @@
-package com.example.checkers;
+package com.example.checkers.common;
 
+import com.example.checkers.data.ColorSet;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import static com.example.checkers.ColorSet.notPlayableColor;
-import static com.example.checkers.ColorSet.playableColor;
+import static com.example.checkers.data.ColorSet.notPlayableColor;
+import static com.example.checkers.data.ColorSet.playableColor;
 
 public class Tile
 {

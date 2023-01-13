@@ -1,4 +1,10 @@
-package com.example.checkers;
+package com.example.checkers.server;
+
+import com.example.checkers.common.Command;
+import com.example.checkers.common.CommandType;
+import com.example.checkers.common.MoveInfo;
+import com.example.checkers.common.TileCoordinates;
+import com.example.checkers.gamelogic.GameLogic;
 
 import java.io.BufferedReader;
 import java.io.PrintWriter;

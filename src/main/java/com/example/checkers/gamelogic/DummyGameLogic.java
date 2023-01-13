@@ -1,4 +1,6 @@
-package com.example.checkers;
+package com.example.checkers.gamelogic;
+
+import com.example.checkers.common.*;
 
 import java.util.ArrayList;
 

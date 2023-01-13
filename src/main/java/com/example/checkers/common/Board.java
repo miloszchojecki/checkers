@@ -1,8 +1,6 @@
-package com.example.checkers;
+package com.example.checkers.common;
 
 import javafx.scene.layout.GridPane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 
 import java.util.ArrayList;
 

@@ -1,5 +1,7 @@
-package com.example.checkers;
+package com.example.checkers.client;
 
+import com.example.checkers.common.*;
+import com.example.checkers.data.TextStrings;
 import javafx.scene.control.Label;
 import java.util.ArrayList;
 

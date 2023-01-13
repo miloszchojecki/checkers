@@ -1,6 +1,6 @@
-package com.example.checkers;
+package com.example.checkers.gamelogic;
 
-import java.util.Objects;
+import com.example.checkers.common.Board;
 
 public class GameLogicFactory
 {

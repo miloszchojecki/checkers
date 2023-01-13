@@ -1,4 +1,8 @@
-package com.example.checkers;
+package com.example.checkers.server;
+
+import com.example.checkers.common.Board;
+import com.example.checkers.gamelogic.GameLogic;
+import com.example.checkers.gamelogic.GameLogicFactory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
