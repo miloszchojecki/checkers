@@ -96,35 +96,30 @@ public class EnglishCheckersGameLogic extends GameLogic {
             } catch (Exception ignored) {
             }
             if (!possibleKill) {
-                if (thisTile.getPieceColor() == PieceColor.WHITE) {
-                    try {
-                        possibleMoves.add(tiles[tile.getX() - 1][tile.getY() - 1]);
-                    } catch (Exception ignored) {
-                    }
-                    try {
-                        possibleMoves.add(tiles[tile.getX() + 1][tile.getY() - 1]);
-                    } catch (Exception ignored) {
-                    }
-                } else {
-                    try {
-                        possibleMoves.add(tiles[tile.getX() + 1][tile.getY() + 1]);
-                    } catch (Exception ignored) {
-                    }
-                    try {
-                        possibleMoves.add(tiles[tile.getX() - 1][tile.getY() + 1]);
-                    } catch (Exception ignored) {
-                    }
+                try {
+                    possibleMoves.add(tiles[tile.getX() - 1][tile.getY() - 1]);
+                } catch (Exception ignored) {
+                }
+                try {
+                    possibleMoves.add(tiles[tile.getX() + 1][tile.getY() - 1]);
+                } catch (Exception ignored) {
+                }
+                try {
+                    possibleMoves.add(tiles[tile.getX() + 1][tile.getY() + 1]);
+                } catch (Exception ignored) {
+                }
+                try {
+                    possibleMoves.add(tiles[tile.getX() - 1][tile.getY() + 1]);
+                } catch (Exception ignored) {
                 }
                 possibleMoves.removeIf(Tile::hasPiece);
             }
             return tilesToCoordinates(possibleMoves);
-        }
-
-        else {
+        } else {
             boolean possibleKill = false;
             ArrayList<Tile> possibleMoves = new ArrayList<>();
             Tile thisTile = coordinatesToTile(tile);
-            if (thisTile.getPieceColor() == PieceColor.WHITE) {
+            if (thisTile.getPieceColor() == PieceColor.BLACK) {
                 try {
                     Tile current = tiles[tile.getX() - 1][tile.getY() + 1];
                     if (current.hasPiece()) {
@@ -162,7 +157,6 @@ public class EnglishCheckersGameLogic extends GameLogic {
                     }
                 } catch (Exception ignored) {
                 }
-
                 try {
                     Tile current = tiles[tile.getX() + 1][tile.getY() - 1];
                     if (current.hasPiece()) {
@@ -229,10 +223,12 @@ public class EnglishCheckersGameLogic extends GameLogic {
         if (to.getPieceColor() == PieceColor.WHITE) {
             if (to.getY() == 0) {
                 to.getPiece().makeQueen();
+                queen = true;
             }
         } else {
             if (to.getY() == 7) {
                 to.getPiece().makeQueen();
+                queen = true;
             }
         }
         totalMoves++;
