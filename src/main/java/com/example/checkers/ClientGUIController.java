@@ -32,6 +32,8 @@ public class ClientGUIController implements Initializable
     Board gameBoard;
     ClientGameHandler clientGameHandler;
 
+    private Socket socket;
+
     final String[] gameModes = {"Warcaby angielskie", "Warcaby włoskie", "Warcaby dwuliniowe"};
 
     @Override
@@ -44,8 +46,9 @@ public class ClientGUIController implements Initializable
         vbox.getChildren().add(gridPane);
         startButton.setOnAction(actionEvent -> startButtonHandler());
 
-        try(Socket socket = new Socket("localhost", 4444))
+        try
         {
+            socket = new Socket("localhost", 4444);
             serverInput = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             serverOutput = new PrintWriter(socket.getOutputStream(), true);
 

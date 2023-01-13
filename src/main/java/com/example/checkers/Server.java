@@ -31,7 +31,7 @@ public class Server
             secondOutput.println("2");
 
             String gameMode = firstInput.readLine();
-
+            System.out.println(gameMode);
             GameLogicFactory gameLogicFactory = new GameLogicFactory(new Board());
             GameLogic gameLogic = gameLogicFactory.getGameLogic(gameMode);
 
