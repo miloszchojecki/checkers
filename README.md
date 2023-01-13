@@ -4,7 +4,7 @@ Gra w warcaby oparta o klient-serwer
 Dostępne rodzaje gier i zasady:
 
 
-Szachy angielskie:
+Warcaby angielskie:
 
 -Plansza
 
@@ -27,8 +27,7 @@ Szachy angielskie:
   Pionek staje się damką jeśli dojdzie do końcowej linii planszy po stronie przeciwnika i się na niej zatrzyma.
   
 
-
-Szachy włoskie:
+Warcaby włoskie:
 
 -Plansza
 
@@ -54,7 +53,7 @@ Szachy włoskie:
   
   
   
-Szachy dwuliniowe:
+Warcaby dwuliniowe:
 
 -Plansza
 
