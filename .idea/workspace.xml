@@ -1,34 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="8" />
+    <option name="CUSTOM_SCOPE_NAME" value="Module 'checkers'" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d9e751d-f614-4953-834a-e8b7bf17f110" name="Changes" comment="uml diagram">
+    <list default="true" id="8d9e751d-f614-4953-834a-e8b7bf17f110" name="Changes" comment="comments">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientCommunicator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientGUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientGUIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientGameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientGameHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/CommandType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/CommandType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/MoveInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/MoveInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/Piece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/PieceColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/PieceColor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/TileCoordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/TileCoordinates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/data/ColorSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/data/ColorSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/data/TextStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/data/TextStrings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/DummyGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/DummyGameLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/EnglishCheckersGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/EnglishCheckersGameLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/GameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/GameLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/GameLogicFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/GameLogicFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/ItalianCheckersGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/ItalianCheckersGameLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/TwoLineCheckersGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/TwoLineCheckersGameLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/server/ServerCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/server/ServerCommunicator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/server/ServerGameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/server/ServerGameHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/client/ClientApplication.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/client/ClientCommunicator.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/client/ClientGUIController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/client/ClientGameHandler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/client/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/client/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/common/Board.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/common/Command.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/common/CommandType.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/common/MoveInfo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/common/Piece.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/common/PieceColor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/common/Tile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/common/TileCoordinates.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/common/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/common/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/data/ColorSet.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/data/TextStrings.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/data/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/data/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/gamelogic/DummyGameLogic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/gamelogic/EnglishCheckersGameLogic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/gamelogic/GameLogic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/gamelogic/GameLogicFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/gamelogic/ItalianCheckersGameLogic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/gamelogic/TwoLineCheckersGameLogic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/gamelogic/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/gamelogic/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/server/Server.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/server/ServerCommunicator.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/server/ServerGameHandler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/server/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/com/example/checkers/server/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.example.checkers/module-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-10.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-11.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-12.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-13.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-14.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-15.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-16.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-17.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-18.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-19.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/index-9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-ui.overrides.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/legal/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/legal/jquery.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/legal/jqueryUI.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script-dir/jquery-3.6.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script-dir/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script-dir/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tag-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/type-search-index.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,14 +170,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in checkers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="checkers" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.ClientApplication" />
       <item itemvalue="Application.Server" />
+      <item itemvalue="JUnit.All in checkers" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ClientApplication" />
         <item itemvalue="Application.Server" />
+        <item itemvalue="JUnit.All in checkers" />
       </list>
     </recent_temporary>
   </component>
@@ -232,7 +299,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673610875367</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="comments">
+      <created>1673612843213</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1673612843213</updated>
+    </task>
+    <task id="LOCAL-00016" summary="comments">
+      <created>1673612860279</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1673612860279</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +345,8 @@
     <MESSAGE value="code cleanup" />
     <MESSAGE value="bug fix" />
     <MESSAGE value="uml diagram" />
-    <option name="LAST_COMMIT_MESSAGE" value="uml diagram" />
+    <MESSAGE value="comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="comments" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/checkers$ClientApplication.ic" NAME="ClientApplication Coverage Results" MODIFIED="1673611965939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
