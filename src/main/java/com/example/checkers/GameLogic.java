@@ -33,10 +33,6 @@ public abstract class GameLogic {
         return turn;
     }
 
-    public PieceColor getWinner() {
-        return winner;
-    }
-
     public abstract void initialize();
 
     public abstract ArrayList<TileCoordinates> getPossibleMoves(TileCoordinates tile);
@@ -45,7 +41,6 @@ public abstract class GameLogic {
 
     public abstract boolean isKillPossible(TileCoordinates tile);
 
-    //public abstract boolean checkWinner();
     public Tile[][] getTiles() {
         return tiles;
     }

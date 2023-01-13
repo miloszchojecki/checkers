@@ -2,7 +2,8 @@ package com.example.checkers;
 
 public class TileCoordinates
 {
-    private int x, y;
+    private final int x;
+    private final int y;
 
     public TileCoordinates(int x, int y)
     {

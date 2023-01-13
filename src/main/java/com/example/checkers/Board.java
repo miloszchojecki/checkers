@@ -62,10 +62,4 @@ public class Board {
         }
         return neighbors;
     }
-
-    public ArrayList<Tile> getForwardTileNeighbors(Tile tile){
-        ArrayList<Tile> neighbors = getTileNeighbors(tile);
-        neighbors.removeIf(neighbor -> tile.getY() > neighbor.getY());
-        return neighbors;
-    }
 }

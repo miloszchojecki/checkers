@@ -1,17 +1,11 @@
 package com.example.checkers;
 
-import javafx.application.Platform;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -32,11 +26,6 @@ public class ClientGUIController implements Initializable
     @FXML
     private ComboBox<String> choiceBox;
 
-    private GridPane gridPane;
-
-    private Game game;
-
-    private Socket socket;
     BufferedReader serverInput;
     PrintWriter serverOutput;
     int clientNumber;
@@ -51,13 +40,12 @@ public class ClientGUIController implements Initializable
         choiceBox.getItems().addAll(gameModes);
 
         gameBoard = new Board();
-        gridPane = gameBoard.getGridPane();
+        GridPane gridPane = gameBoard.getGridPane();
         vbox.getChildren().add(gridPane);
         startButton.setOnAction(actionEvent -> startButtonHandler());
 
-        try
+        try(Socket socket = new Socket("localhost", 4444))
         {
-            socket = new Socket("localhost", 4444);
             serverInput = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             serverOutput = new PrintWriter(socket.getOutputStream(), true);
 

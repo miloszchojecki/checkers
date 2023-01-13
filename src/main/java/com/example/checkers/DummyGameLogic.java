@@ -113,11 +113,4 @@ public class DummyGameLogic extends GameLogic
         return false;
     }
 
-    //do usuniecia
-    public boolean checkWinner()
-    {
-        return winner != null;
-    }
-
-
 }

@@ -6,9 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="8d9e751d-f614-4953-834a-e8b7bf17f110" name="Changes" comment="small fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/EnglishCheckersGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/EnglishCheckersGameLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ItalianCheckersGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/ItalianCheckersGameLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/TwoLineCheckersGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/TwoLineCheckersGameLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClientCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClientCommunicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClientGUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClientGUIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClientGameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/ClientGameHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/DummyGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/DummyGameLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/Game.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/GameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/GameLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/MoveInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/MoveInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/PieceColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/PieceColor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/ServerGameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/ServerGameHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/TextStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/TextStrings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/TileCoordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/TileCoordinates.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673601041910</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="small fix">
+      <created>1673601709584</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1673601709584</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

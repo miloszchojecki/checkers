@@ -21,11 +21,6 @@ public class ClientCommunicator
         return new TileCoordinates(Integer.parseInt(String.valueOf(message.charAt(1))), Integer.parseInt(String.valueOf(message.charAt(2))));
     }
 
-    public TileCoordinates getNextCoordinates(String message)
-    {
-        return new TileCoordinates(Integer.parseInt(String.valueOf(message.charAt(3))), Integer.parseInt(String.valueOf(message.charAt(4))));
-    }
-
     public PieceColor getPlacePieceColor(String message)
     {
         if(message.charAt(0) != 'p')

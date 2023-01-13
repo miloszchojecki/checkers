@@ -1,27 +1,21 @@
 package com.example.checkers;
 
-import javafx.application.Platform;
 import javafx.scene.control.Label;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class ClientGameHandler
 {
-    private Board board;
-    private Tile[][] tiles;
-    private Label label;
+    private final Tile[][] tiles;
+    private final Label label;
     private Tile selected = null;
-        private boolean clickPossible = false;
-        private ClientCommunicator clientCommunicator;
+    private boolean clickPossible = false;
+    private final ClientCommunicator clientCommunicator;
 
     private ArrayList<TileCoordinates> possibleMoves;
     private ArrayList<Tile> possibleMovesTiles;
 
-        PieceColor pieceColor;
-        char pieceColorChar;
+    PieceColor pieceColor;
+    char pieceColorChar;
 
         private Tile tileFromCoordinates(TileCoordinates coordinates)
         {
@@ -32,7 +26,6 @@ public class ClientGameHandler
         {
             pieceColor = (clientNumber == 1 ? PieceColor.WHITE : PieceColor.BLACK);
             pieceColorChar = (pieceColor == PieceColor.WHITE ? 'w' : 'b');
-            this.board = board;
             tiles = board.getTiles();
             this.label = label;
             this.clientCommunicator = clientCommunicator;

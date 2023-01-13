@@ -3,9 +3,11 @@ package com.example.checkers;
 public class MoveInfo
 {
 
-    private PieceColor pieceColor, nextTurn, winner;
-    private TileCoordinates killedPiece;
-    private boolean queen;
+    private final PieceColor pieceColor;
+    private final PieceColor nextTurn;
+    private final PieceColor winner;
+    private final TileCoordinates killedPiece;
+    private final boolean queen;
 
     public MoveInfo(PieceColor pieceColor, PieceColor nextTurn, TileCoordinates killedPiece, boolean queen, PieceColor winner)
     {

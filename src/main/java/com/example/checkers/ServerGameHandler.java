@@ -1,10 +1,7 @@
 package com.example.checkers;
 
 import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.net.Socket;
 import java.util.ArrayList;
 
 public class ServerGameHandler
@@ -13,10 +10,7 @@ public class ServerGameHandler
     PrintWriter firstOutput, secondOutput;
 
     GameLogic gameLogic;
-
     ServerCommunicator serverCommunicator;
-
-    PieceColor turn;
 
     public ServerGameHandler(GameLogic gameLogic, BufferedReader firstInput, PrintWriter firstOutput, BufferedReader secondInput, PrintWriter secondOutput)
     {
@@ -26,16 +20,6 @@ public class ServerGameHandler
             this.secondInput = secondInput;
             this.secondOutput = secondOutput;
             serverCommunicator = new ServerCommunicator(firstInput, firstOutput, secondInput, secondOutput);
-    }
-
-    private BufferedReader getPlayerInput(PieceColor player)
-    {
-        return (player == PieceColor.WHITE ? firstInput : secondInput);
-    }
-
-    private PrintWriter getPlayerOutput(PieceColor player)
-    {
-        return (player == PieceColor.WHITE ? firstOutput : secondOutput);
     }
 
     public void playGame()
@@ -58,7 +42,6 @@ public class ServerGameHandler
                     TileCoordinates moveFromCoordinates = command.getCoordinates();
                     TileCoordinates moveToCoordinates = command.getNextCoordinates();
                     MoveInfo moveInfo = gameLogic.makeMove(moveFromCoordinates, moveToCoordinates);
-                    System.out.println("test");
                     if (moveInfo != null)
                     {
                         serverCommunicator.sendMoveInfo(moveFromCoordinates, moveToCoordinates, moveInfo);

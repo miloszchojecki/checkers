@@ -2,8 +2,6 @@ package com.example.checkers;
 
 public class TextStrings
 {
-    static String whiteTurnMsg = "Ruch białych";
-    static String blackTurnMsg = "Ruch czarnych";
     static String yourTurnMsg = "Twoja kolej";
     static String opponentTurnMsg = "Kolej przeciwnika";
     static String whiteWinMsg = "Biały gracz wygrywa";

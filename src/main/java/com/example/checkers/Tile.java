@@ -1,16 +1,8 @@
 package com.example.checkers;
 
-import javafx.scene.image.Image;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundImage;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
-
-import java.util.ArrayList;
-
 import static com.example.checkers.ColorSet.notPlayableColor;
 import static com.example.checkers.ColorSet.playableColor;
 
@@ -24,8 +16,6 @@ public class Tile
 
     private final int x;
     private final int y;
-
-    private Color currentColor;
 
     private Color defaultColor;
 
@@ -47,7 +37,6 @@ public class Tile
     void setColor(Color color)
     {
         rectangle.setFill(color);
-        currentColor = color;
     }
 
     public void setPlayable(boolean playable)
