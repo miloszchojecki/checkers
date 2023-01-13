@@ -177,7 +177,7 @@ public class EnglishCheckersGameLogic extends GameLogic {
                 }
             }
             if (!possibleKill) {
-                if (thisTile.getPieceColor() == PieceColor.BLACK) {
+                if (thisTile.getPieceColor() == PieceColor.WHITE) {
                     try {
                         possibleMoves.add(tiles[tile.getX() - 1][tile.getY() - 1]);
                     } catch (Exception ignored) {
