@@ -4,11 +4,15 @@ import javafx.scene.layout.GridPane;
 
 import java.util.ArrayList;
 
+/**
+ * class that represents board
+ */
 public class Board {
     private final GridPane gridPane;
-
     private final Tile[][] tiles;
-
+    /**
+     * Board constructor
+     */
     public Board() {
         gridPane = new GridPane();
         tiles = new Tile[8][8];
@@ -21,43 +25,28 @@ public class Board {
             }
         }
     }
-
+    /**
+     * Method that gets GridPane
+     */
     public GridPane getGridPane() {
         return gridPane;
     }
-
+    /**
+     * Method that gets Tiles
+     */
     public Tile[][] getTiles() {
         return tiles;
     }
-
+    /**
+     * Method that gets Neighbor of the tile
+     * @param offsetX offset of value x
+     * @param offsetY offset of value y
+     */
     public Tile getNeighbor(Tile tile, int offsetX, int offsetY){
         Tile neighbor = null;
         try{
             neighbor = tiles[tile.getX() + offsetX][tile.getY() + offsetY];
         }catch(Exception ignored){}
         return neighbor;
-    }
-
-    public ArrayList<Tile> getTileNeighbors(Tile tile) {
-        int tileX = tile.getX();
-        int tileY = tile.getY();
-        ArrayList<Tile> neighbors = new ArrayList<>();
-        try {
-            neighbors.add(tiles[tileX - 1][tileY - 1]);
-        } catch (Exception ignored) {
-        }
-        try {
-            neighbors.add(tiles[tileX - 1][tileY + 1]);
-        } catch (Exception ignored) {
-        }
-        try {
-            neighbors.add(tiles[tileX + 1][tileY - 1]);
-        } catch (Exception ignored) {
-        }
-        try {
-            neighbors.add(tiles[tileX + 1][tileY + 1]);
-        } catch (Exception ignored) {
-        }
-        return neighbors;
     }
 }

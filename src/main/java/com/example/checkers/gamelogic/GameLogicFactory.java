@@ -2,15 +2,22 @@ package com.example.checkers.gamelogic;
 
 import com.example.checkers.common.Board;
 
+/**
+ * class of design pattern Factory
+ */
 public class GameLogicFactory
 {
     private Board board;
-
+    /**
+     * GameLogicFactory constructor
+     */
     public GameLogicFactory(Board board)
     {
         this.board = board;
     }
-
+    /**
+     * Method that gets gameLogic
+     */
     public GameLogic getGameLogic(String gameMode)
     {
         if(gameMode.equals("Warcaby angielskie"))

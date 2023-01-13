@@ -1,10 +1,15 @@
 package com.example.checkers.data;
 
 import javafx.scene.paint.Color;
-
+/**
+ * class of colorSet
+ */
 public class ColorSet
 {
     //tile colors
+    /**
+     * Methods that set colors
+     */
     public static Color playableColor = Color.rgb(118, 150, 86);
     public static Color notPlayableColor = Color.rgb(238, 238, 210);
     public static Color selectedColor = Color.rgb(255, 102, 0);

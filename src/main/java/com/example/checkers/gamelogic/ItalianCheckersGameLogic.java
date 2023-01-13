@@ -3,7 +3,9 @@ package com.example.checkers.gamelogic;
 import com.example.checkers.common.*;
 
 import java.util.ArrayList;
-
+/**
+ * class of ItalianCheckersGameLogic that extends GameLogic
+ */
 public class ItalianCheckersGameLogic extends GameLogic {
     private int totalMoves = 0;
     private final int maximumMoves = 100;

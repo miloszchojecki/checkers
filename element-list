@@ -1,0 +1,6 @@
+module:com.example.checkers
+com.example.checkers.client
+com.example.checkers.common
+com.example.checkers.data
+com.example.checkers.gamelogic
+com.example.checkers.server

@@ -16,7 +16,9 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.URL;
 import java.util.ResourceBundle;
-
+/**
+ * class of ClientGUIController
+ */
 public class ClientGUIController implements Initializable
 {
     @FXML

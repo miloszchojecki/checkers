@@ -1,7 +1,12 @@
 package com.example.checkers.data;
-
+/**
+ * class of textStrings
+ */
 public class TextStrings
 {
+    /**
+     * Methods that make messages
+     */
     public static String yourTurnMsg = "Twoja kolej";
     public static String opponentTurnMsg = "Kolej przeciwnika";
     public static String whiteWinMsg = "Biały gracz wygrywa";

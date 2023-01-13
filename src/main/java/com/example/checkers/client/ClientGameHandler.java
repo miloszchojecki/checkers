@@ -4,7 +4,9 @@ import com.example.checkers.common.*;
 import com.example.checkers.data.TextStrings;
 import javafx.scene.control.Label;
 import java.util.ArrayList;
-
+/**
+ * class of ClientGameHandler
+ */
 public class ClientGameHandler
 {
     private final Tile[][] tiles;

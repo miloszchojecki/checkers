@@ -3,7 +3,9 @@ package com.example.checkers.gamelogic;
 import com.example.checkers.common.*;
 
 import java.util.ArrayList;
-
+/**
+ * class of dummyGameLogic that extends GameLogic
+ */
 public class DummyGameLogic extends GameLogic
 {
 

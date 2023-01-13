@@ -6,6 +6,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+/**
+ * class of ClientApplication
+ */
 
 public class ClientApplication extends Application
 {

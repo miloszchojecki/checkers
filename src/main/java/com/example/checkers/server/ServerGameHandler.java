@@ -9,7 +9,9 @@ import com.example.checkers.gamelogic.GameLogic;
 import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-
+/**
+ * class of ServerGameHandler
+ */
 public class ServerGameHandler
 {
     BufferedReader firstInput, secondInput;

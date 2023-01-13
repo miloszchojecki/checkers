@@ -3,7 +3,9 @@ package com.example.checkers.gamelogic;
 import com.example.checkers.common.*;
 
 import java.util.ArrayList;
-
+/**
+ * class of TwoLineCheckersGameLogic that extends GameLogic
+ */
 public class TwoLineCheckersGameLogic extends GameLogic {
     private int totalMoves = 0;
     private final int maximumMoves = 100;
