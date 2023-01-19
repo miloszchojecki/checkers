@@ -88,9 +88,6 @@ public class ClientGUIController implements Initializable
 
     void startGame()
     {
-        //label.setVisible(false);
-
         clientGameHandler = new ClientGameHandler(clientNumber, gameBoard, label, new ClientCommunicator(serverInput, serverOutput));
-        //clientGameHandler.update();
     }
 }

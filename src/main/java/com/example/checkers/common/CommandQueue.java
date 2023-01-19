@@ -5,7 +5,7 @@ import java.util.Queue;
 
 public class CommandQueue
 {
-    private Queue<Command> queue = new ArrayDeque<>();
+    private final Queue<Command> queue = new ArrayDeque<>();
 
     public void addCommand(Command command)
     {

@@ -89,21 +89,6 @@ public class ClientCommunicator
     {
         String message = "s" + tileCoordinates.toString();
         output.println(message);
-        /*ArrayList<TileCoordinates> possibleMoves = new ArrayList<>();
-        try
-        {
-            int length = Integer.parseInt(input.readLine());
-            for(int i=0; i<length; i++)
-            {
-                TileCoordinates coordinates = getCoordinates(input.readLine());
-                possibleMoves.add(coordinates);
-            }
-        }
-        catch (IOException e)
-        {
-            throw new RuntimeException(e);
-        }
-        return possibleMoves;*/
     }
 
     public void sendMove(TileCoordinates from, TileCoordinates to)

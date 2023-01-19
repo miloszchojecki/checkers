@@ -109,9 +109,7 @@ public class ServerCommunicator
     public void sendPossibleMoves(PieceColor player, ArrayList<TileCoordinates> tileCoordinates)
     {
         PrintWriter out = getPlayerOutput(player);
-        int length = tileCoordinates.size();
-        System.out.println("server to player " + player + " (possible moves): " + length);
-        //out.println(length);
+        System.out.println("server to player " + player + " (possible moves): " + tileCoordinates.size());
         for(TileCoordinates tile : tileCoordinates)
         {
             message = "x" + tile.toString();

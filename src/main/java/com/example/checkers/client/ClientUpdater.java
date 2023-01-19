@@ -5,8 +5,8 @@ import javafx.animation.AnimationTimer;
 
 public class ClientUpdater extends AnimationTimer
 {
-    private CommandQueue commandQueue;
-    private ClientGameHandler clientGameHandler;
+    private final CommandQueue commandQueue;
+    private final ClientGameHandler clientGameHandler;
 
     public ClientUpdater(CommandQueue commandQueue, ClientGameHandler clientGameHandler)
     {

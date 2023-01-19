@@ -96,6 +96,7 @@ public class ClientGameHandler
     {
         if(!clickPossible)
             return;
+
         if (tile.hasPiece())
         {
             if (tile.getPieceColor() != pieceColor)
@@ -154,16 +155,4 @@ public class ClientGameHandler
         possibleMoves = new ArrayList<>();
         possibleMovesTiles = new ArrayList<>();
     }
-
-    /*void getPossibleMoves(Tile tile)
-    {
-        resetPossibleMoves();
-        possibleMoves = clientCommunicator.getPossibleMoves(new TileCoordinates(tile));
-        possibleMovesTiles = new ArrayList<>();
-        for (TileCoordinates possible : possibleMoves)
-        {
-            tiles[possible.getX()][possible.getY()].setPossible(true);
-            possibleMovesTiles.add(tileFromCoordinates(possible));
-        }
-    }*/
 }

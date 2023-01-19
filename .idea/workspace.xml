@@ -8,15 +8,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d9e751d-f614-4953-834a-e8b7bf17f110" name="Changes" comment="hide label">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientUpdater.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ReceiverThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/CommandQueue.java" afterDir="false" />
+    <list default="true" id="8d9e751d-f614-4953-834a-e8b7bf17f110" name="Changes" comment="fixed client-server communication">
+      <change afterPath="$PROJECT_DIR$/src/test/java/CommandQueueTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientCommunicator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientGUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientGUIController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientGameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientGameHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/CommandType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/CommandType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientUpdater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ReceiverThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ReceiverThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/CommandQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/CommandQueue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/server/ServerCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/server/ServerCommunicator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +76,7 @@
       <recent name="com.example.checkers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ClientApplication">
+  <component name="RunManager" selected="JUnit.CommandQueueTest">
     <configuration name="ClientApplication" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.checkers.client.ClientApplication" />
       <module name="checkers" />
@@ -110,13 +111,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CommandQueueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="checkers" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CommandQueueTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.ClientApplication" />
       <item itemvalue="Application.Server" />
+      <item itemvalue="JUnit.CommandQueueTest" />
       <item itemvalue="JUnit.All in checkers" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CommandQueueTest" />
         <item itemvalue="Application.ClientApplication" />
         <item itemvalue="Application.Server" />
         <item itemvalue="JUnit.All in checkers" />
@@ -252,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673615983359</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="fixed client-server communication">
+      <created>1674169350226</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1674169350226</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +305,8 @@
     <MESSAGE value="uml diagram" />
     <MESSAGE value="comments" />
     <MESSAGE value="hide label" />
-    <option name="LAST_COMMIT_MESSAGE" value="hide label" />
+    <MESSAGE value="fixed client-server communication" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed client-server communication" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/checkers$ClientApplication.ic" NAME="ClientApplication Coverage Results" MODIFIED="1673611965939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

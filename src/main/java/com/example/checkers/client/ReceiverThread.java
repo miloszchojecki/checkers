@@ -6,8 +6,8 @@ import com.example.checkers.common.CommandQueue;
 
 public class ReceiverThread extends Thread
 {
-    private ClientCommunicator clientCommunicator;
-    private CommandQueue commandQueue;
+    private final ClientCommunicator clientCommunicator;
+    private final CommandQueue commandQueue;
 
     public ReceiverThread(ClientCommunicator clientCommunicator, CommandQueue commandQueue)
     {

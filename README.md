@@ -1,77 +1,37 @@
-# checkers
-Gra w warcaby oparta o klient-serwer
+# Warcaby (checkers)
+Aplikacja do gry w warcaby w architekturze klient-serwer - lista 4 z Technologii Programowania
 
-Dostępne rodzaje gier i zasady:
+## Dostępne rodzaje gier i zasady:
+
+1. Warcaby angielskie:
+
+ - Plansza 8x8, gracze poruszają się po ciemnych polach
+ - Gracze mają po 12 pionków.
+ - Bicie jest obowiązkowe, ale możliwe w przypadku zwykłych pionków tylko w przód. Gracz nie ma obowiązku 
+zbicia największej możliwej liczby pionków, może wybrać dowolne bicie. 
+- Damka wykonuje tzw. "krótkie ruchy" - o jedno pole do przodu albo do tyłu. Damka może bić do tyłu. 
+Pionek staje się damką, jeśli dojdzie do końcowej linii planszy po stronie przeciwnika i się na niej zatrzyma.
+  
+2. Warcaby włoskie:
+
+ - Plansza 8x8, gracze poruszają się po ciemnych polach
+ - Gracze mają po 12 pionków.
+ - Bicie jest obowiązkowe, ale pionki mogą wykonywać bicie tylko do przodu. Gracz nie ma obowiązku 
+zbicia największej możliwej liczby pionków, może wybrać dowolne bicie. 
+ - Podobnie jak w warcabach angielskich, damka wykonuje tzw. "krótkie ruchy" oraz może bić do tyłu.
+   Pionek staje się damką, jeśli dojdzie do końcowej
+   linii planszy po stronie przeciwnika i się na niej zatrzyma. 
 
 
-Warcaby angielskie:
+Cechą szczególną warcabów włoskich jest brak możliwości zbicia damki przez zwykły pionek.
 
--Plansza
+3. Warcaby dwuliniowe:
 
-  8x8, gracze poruszają się po ciemnych polach
-  
--Pionki
+ - Plansza 8x8, gracze poruszają się po ciemnych polach
+ - Gracze mają po 8 pionków. 
+ - Bicie jest obowiązkowe, ale możliwe w przypadku zwykłych pionków tylko w przód. Gracz nie ma obowiązku zbicia największej możliwej liczby pionków, może wybrać dowolne bicie. 
+ - Damka wykonuje tzw. "krótkie ruchy" - o jedno pole do przodu albo do tyłu. Damka może bić do tyłu. 
+ - Pionek staje się damką jeśli dojdzie do końcowej linii planszy po stronie przeciwnika i się na niej zatrzyma.
 
-  Gracze mają po 12 pionków. 
-  
--Bicie
-
-  Bicie jest obowiązkowe, ale możliwe w przypadku zwykłych pionków tylko w przód. Gracz nie ma obowiązku 
-  
-  zbicia największej możliwej liczby pionków, może wybrać dowolne bicie. 
-  
--Damka
-
-  Wykonuje tzw. "krótkie ruchy" - o jedno pole do przodu albo do tyłu. Damka może bić do tyłu. 
-  
-  Pionek staje się damką jeśli dojdzie do końcowej linii planszy po stronie przeciwnika i się na niej zatrzyma.
-  
-
-Warcaby włoskie:
-
--Plansza
-
-  8x8, gracze poruszają się po ciemnych polach
-  
--Pionki
-
-  Gracze mają po 12 pionków.
-  
--Bicie
-
-  Bicie jest obowiązkowe, ale pionki mogą wykonywać bicie tylko do przodu. Gracz nie ma obowiązku 
-  
-  zbicia największej możliwej liczby pionków, może wybrać dowolne bicie. 
-  
--Damka
-
-  Podobnie jak w warcabach angielskich damka wykonuje tzw. "krótkie ruchy" oraz może bić do tyłu. 
-  
-  Cechą szczególną warcabów włoskich jest brak możliwości zbicia damki przez zwykły pionek. Pionek staje się damką jeśli dojdzie do końcowej 
-  
-  linii planszy po stronie przeciwnika i się na niej zatrzyma.
-  
-  
-  
-Warcaby dwuliniowe:
-
--Plansza
-
-  8x8, gracze poruszają się po ciemnych polach
-  
--Pionki
-
-  Gracze mają po 8 pionków. 
-  
--Bicie
-
-  Bicie jest obowiązkowe, ale możliwe w przypadku zwykłych pionków tylko w przód. Gracz nie ma obowiązku 
-  
-  zbicia największej możliwej liczby pionków, może wybrać dowolne bicie. 
-  
--Damka
-
-  Wykonuje tzw. "krótkie ruchy" - o jedno pole do przodu albo do tyłu. Damka może bić do tyłu. 
-  
-  Pionek staje się damką jeśli dojdzie do końcowej linii planszy po stronie przeciwnika i się na niej zatrzyma.
-
+## Autorzy
+Michał Biszczanik, Miłosz Chojecki
