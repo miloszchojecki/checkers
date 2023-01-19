@@ -1,5 +1,5 @@
 # Warcaby (checkers)
-Aplikacja do gry w warcaby w architekturze klient-serwer - lista 4 z Technologii Programowania
+Aplikacja do gry w warcaby stworzona w oparciu o architekturę klient-serwer - lista 4 z Technologii Programowania
 
 ## Dostępne rodzaje gier i zasady:
 
