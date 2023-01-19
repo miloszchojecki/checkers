@@ -56,6 +56,11 @@ public class ClientCommunicator
                 TileCoordinates coordinates = getCoordinates(message);
                 return new Command(CommandType.REMOVE, coordinates);
             }
+            else if (message.charAt(0) == 'x')
+            {
+                TileCoordinates coordinates = getCoordinates(message);
+                return new Command(CommandType.POSSIBLE, coordinates);
+            }
             else if(message.charAt(0) == 'q')
             {
                 TileCoordinates coordinates = getCoordinates(message);
@@ -80,11 +85,11 @@ public class ClientCommunicator
 
     }
 
-    public ArrayList<TileCoordinates> getPossibleMoves(TileCoordinates tileCoordinates)
+    public void getPossibleMoves(TileCoordinates tileCoordinates)
     {
         String message = "s" + tileCoordinates.toString();
         output.println(message);
-        ArrayList<TileCoordinates> possibleMoves = new ArrayList<>();
+        /*ArrayList<TileCoordinates> possibleMoves = new ArrayList<>();
         try
         {
             int length = Integer.parseInt(input.readLine());
@@ -98,7 +103,7 @@ public class ClientCommunicator
         {
             throw new RuntimeException(e);
         }
-        return possibleMoves;
+        return possibleMoves;*/
     }
 
     public void sendMove(TileCoordinates from, TileCoordinates to)

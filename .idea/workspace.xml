@@ -8,7 +8,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d9e751d-f614-4953-834a-e8b7bf17f110" name="Changes" comment="comments" />
+    <list default="true" id="8d9e751d-f614-4953-834a-e8b7bf17f110" name="Changes" comment="hide label">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientUpdater.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ReceiverThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/CommandQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientCommunicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientGUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientGUIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientGameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/client/ClientGameHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/CommandType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/CommandType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/server/ServerCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/server/ServerCommunicator.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -235,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673612860279</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="hide label">
+      <created>1673615983359</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1673615983359</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +285,8 @@
     <MESSAGE value="bug fix" />
     <MESSAGE value="uml diagram" />
     <MESSAGE value="comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="comments" />
+    <MESSAGE value="hide label" />
+    <option name="LAST_COMMIT_MESSAGE" value="hide label" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/checkers$ClientApplication.ic" NAME="ClientApplication Coverage Results" MODIFIED="1673611965939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

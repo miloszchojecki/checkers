@@ -111,7 +111,7 @@ public class ServerCommunicator
         PrintWriter out = getPlayerOutput(player);
         int length = tileCoordinates.size();
         System.out.println("server to player " + player + " (possible moves): " + length);
-        out.println(length);
+        //out.println(length);
         for(TileCoordinates tile : tileCoordinates)
         {
             message = "x" + tile.toString();
