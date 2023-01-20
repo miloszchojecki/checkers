@@ -89,7 +89,7 @@ public class FixedEnglishCheckersGameLogic extends GameLogic
         if (gameBoard.getNeighbor(tile, -1, -moveDir) != null && gameBoard.getNeighbor(tile, -2, -moveDir * 2) != null)
         {
             if (gameBoard.getNeighbor(tile, -1, -moveDir).hasPiece())
-                if (gameBoard.getNeighbor(tile, -1, moveDir).getPieceColor() != turn && !gameBoard.getNeighbor(tile, -2, moveDir * 2).hasPiece())
+                if (gameBoard.getNeighbor(tile, -1, -moveDir).getPieceColor() != turn && !gameBoard.getNeighbor(tile, -2, -moveDir * 2).hasPiece())
                 {
                     possibleKills.add(new TileCoordinates(gameBoard.getNeighbor(tile, -2, -moveDir * 2)));
                 }
@@ -189,9 +189,9 @@ public class FixedEnglishCheckersGameLogic extends GameLogic
             changeTurn();
         updateCoordinates();
         if (whiteCoordinates.size() == 0)
-            winner = PieceColor.WHITE;
-        else if (blackCoordinates.size() == 0)
             winner = PieceColor.BLACK;
+        else if (blackCoordinates.size() == 0)
+            winner = PieceColor.WHITE;
         return new MoveInfo(oldTurn, turn, killedPiece, queen, winner);
     }
 }

@@ -10,7 +10,7 @@ Aplikacja do gry w warcaby stworzona w oparciu o architekturę klient-serwer - l
  - Bicie jest obowiązkowe, ale możliwe w przypadku zwykłych pionków tylko w przód. Gracz nie ma obowiązku 
 zbicia największej możliwej liczby pionków, może wybrać dowolne bicie. 
 - Damka wykonuje tzw. "krótkie ruchy" - o jedno pole do przodu albo do tyłu. Damka może bić do tyłu. 
-Pionek staje się damką, jeśli dojdzie do końcowej linii planszy po stronie przeciwnika i się na niej zatrzyma.
+Pionek staje się damką, jeśli dojdzie do końcowej linii planszy po stronie przeciwnika.
   
 2. Warcaby włoskie:
 
@@ -20,7 +20,7 @@ Pionek staje się damką, jeśli dojdzie do końcowej linii planszy po stronie p
 zbicia największej możliwej liczby pionków, może wybrać dowolne bicie. 
  - Podobnie jak w warcabach angielskich, damka wykonuje tzw. "krótkie ruchy" oraz może bić do tyłu.
    Pionek staje się damką, jeśli dojdzie do końcowej
-   linii planszy po stronie przeciwnika i się na niej zatrzyma. 
+   linii planszy po stronie przeciwnika. 
 
 
 Cechą szczególną warcabów włoskich jest brak możliwości zbicia damki przez zwykły pionek.
@@ -31,7 +31,7 @@ Cechą szczególną warcabów włoskich jest brak możliwości zbicia damki prze
  - Gracze mają po 8 pionków. 
  - Bicie jest obowiązkowe, ale możliwe w przypadku zwykłych pionków tylko w przód. Gracz nie ma obowiązku zbicia największej możliwej liczby pionków, może wybrać dowolne bicie. 
  - Damka wykonuje tzw. "krótkie ruchy" - o jedno pole do przodu albo do tyłu. Damka może bić do tyłu. 
-Pionek staje się damką, jeśli dojdzie do końcowej linii planszy po stronie przeciwnika i się na niej zatrzyma.
+Pionek staje się damką, jeśli dojdzie do końcowej linii planszy po stronie przeciwnika.
 
 ## Autorzy
 Michał Biszczanik, Miłosz Chojecki

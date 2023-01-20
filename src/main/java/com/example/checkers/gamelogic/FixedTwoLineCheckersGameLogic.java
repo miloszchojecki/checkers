@@ -89,7 +89,7 @@ public class FixedTwoLineCheckersGameLogic extends GameLogic
         if (gameBoard.getNeighbor(tile, -1, -moveDir) != null && gameBoard.getNeighbor(tile, -2, -moveDir * 2) != null)
         {
             if (gameBoard.getNeighbor(tile, -1, -moveDir).hasPiece())
-                if (gameBoard.getNeighbor(tile, -1, moveDir).getPieceColor() != turn && !gameBoard.getNeighbor(tile, -2, moveDir * 2).hasPiece())
+                if (gameBoard.getNeighbor(tile, -1, -moveDir).getPieceColor() != turn && !gameBoard.getNeighbor(tile, -2, -moveDir * 2).hasPiece())
                 {
                     possibleKills.add(new TileCoordinates(gameBoard.getNeighbor(tile, -2, -moveDir * 2)));
                 }
@@ -175,7 +175,6 @@ public class FixedTwoLineCheckersGameLogic extends GameLogic
         if (Math.abs(from.getX() - to.getX()) > 1)
         {
             killedPiece = new TileCoordinates(from.getX() + (to.getX() - from.getX()) / 2, from.getY() + (to.getY() - from.getY()) / 2);
-            System.out.println(killedPiece);
             coordinatesToTile(killedPiece).removePiece();
         }
         if ((to.getY() == 0 && turn == PieceColor.WHITE) || (to.getY() == 7 && turn == PieceColor.BLACK))
@@ -190,9 +189,9 @@ public class FixedTwoLineCheckersGameLogic extends GameLogic
             changeTurn();
         updateCoordinates();
         if (whiteCoordinates.size() == 0)
-            winner = PieceColor.WHITE;
-        else if (blackCoordinates.size() == 0)
             winner = PieceColor.BLACK;
+        else if (blackCoordinates.size() == 0)
+            winner = PieceColor.WHITE;
         return new MoveInfo(oldTurn, turn, killedPiece, queen, winner);
     }
 }
