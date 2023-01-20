@@ -245,7 +245,6 @@ public class TwoLineCheckersGameLogic extends GameLogic {
         return new MoveInfo(to.getPieceColor(), turn, killed, queen, winner);
     }
 
-    @Override
     public boolean isKillPossible(TileCoordinates tile) {
         boolean possibleKill = false;
         Tile thisTile = coordinatesToTile(tile);

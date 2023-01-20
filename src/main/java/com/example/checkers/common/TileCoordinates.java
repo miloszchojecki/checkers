@@ -43,4 +43,9 @@ public class TileCoordinates
     {
         return x + "" + y;
     }
+
+    public boolean equals(TileCoordinates tileCoordinates)
+    {
+        return this.x == tileCoordinates.getX() && this.y == tileCoordinates.getY();
+    }
 }

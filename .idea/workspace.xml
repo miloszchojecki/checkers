@@ -8,8 +8,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d9e751d-f614-4953-834a-e8b7bf17f110" name="Changes" comment="code cleanup, added new test, readme updated">
+    <list default="true" id="8d9e751d-f614-4953-834a-e8b7bf17f110" name="Changes" comment="fixes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/FixedEnglishCheckersGameLogic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/FixedTwoLineCheckersGameLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_01_2023,_06_22_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_01_2023__06_22__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/TileCoordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/common/TileCoordinates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/DummyGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/DummyGameLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/EnglishCheckersGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/EnglishCheckersGameLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/GameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/GameLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/GameLogicFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/GameLogicFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/ItalianCheckersGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/ItalianCheckersGameLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/TwoLineCheckersGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/gamelogic/TwoLineCheckersGameLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/checkers/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/checkers/server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +80,7 @@
       <recent name="com.example.checkers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CommandQueueTest">
+  <component name="RunManager" selected="Application.ClientApplication">
     <configuration name="ClientApplication" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.checkers.client.ClientApplication" />
       <module name="checkers" />
@@ -119,9 +132,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CommandQueueTest" />
         <item itemvalue="Application.ClientApplication" />
         <item itemvalue="Application.Server" />
+        <item itemvalue="JUnit.CommandQueueTest" />
         <item itemvalue="JUnit.All in checkers" />
       </list>
     </recent_temporary>
@@ -269,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674171728863</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="readme update">
+      <created>1674171918554</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1674171918554</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +325,9 @@
     <MESSAGE value="hide label" />
     <MESSAGE value="fixed client-server communication" />
     <MESSAGE value="code cleanup, added new test, readme updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="code cleanup, added new test, readme updated" />
+    <MESSAGE value="readme update" />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/checkers$ClientApplication.ic" NAME="ClientApplication Coverage Results" MODIFIED="1673611965939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

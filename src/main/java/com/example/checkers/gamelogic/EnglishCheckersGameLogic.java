@@ -15,8 +15,6 @@ public class EnglishCheckersGameLogic extends GameLogic {
     private ArrayList<Piece> blackPieces;
     private ArrayList<Piece> whitePieces;
 
-    private PieceColor winner = null;
-
 
     public EnglishCheckersGameLogic(Board board) {
         this.gameBoard = board;
@@ -246,7 +244,6 @@ public class EnglishCheckersGameLogic extends GameLogic {
         return new MoveInfo(to.getPieceColor(), turn, killed, queen, winner);
     }
 
-    @Override
     public boolean isKillPossible(TileCoordinates tile) {
         boolean possibleKill = false;
         Tile thisTile = coordinatesToTile(tile);

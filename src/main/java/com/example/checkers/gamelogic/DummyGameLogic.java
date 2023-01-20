@@ -112,9 +112,4 @@ public class DummyGameLogic extends GameLogic
         return new MoveInfo(to.getPieceColor(), turn, null, true, winner);
     }
 
-    @Override
-    public boolean isKillPossible(TileCoordinates tile) {
-        return false;
-    }
-
 }

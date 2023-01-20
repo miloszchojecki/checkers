@@ -41,8 +41,6 @@ public class Server
             GameLogicFactory gameLogicFactory = new GameLogicFactory(new Board());
             GameLogic gameLogic = gameLogicFactory.getGameLogic(gameMode);
 
-            //GameLogic gameLogic = new DummyGameLogic(new Board());
-
             ServerGameHandler serverGameHandler = new ServerGameHandler(gameLogic, firstInput, firstOutput, secondInput, secondOutput);
             serverGameHandler.playGame();
         }

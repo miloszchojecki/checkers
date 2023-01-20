@@ -31,7 +31,7 @@ Cechą szczególną warcabów włoskich jest brak możliwości zbicia damki prze
  - Gracze mają po 8 pionków. 
  - Bicie jest obowiązkowe, ale możliwe w przypadku zwykłych pionków tylko w przód. Gracz nie ma obowiązku zbicia największej możliwej liczby pionków, może wybrać dowolne bicie. 
  - Damka wykonuje tzw. "krótkie ruchy" - o jedno pole do przodu albo do tyłu. Damka może bić do tyłu. 
- - Pionek staje się damką jeśli dojdzie do końcowej linii planszy po stronie przeciwnika i się na niej zatrzyma.
+Pionek staje się damką, jeśli dojdzie do końcowej linii planszy po stronie przeciwnika i się na niej zatrzyma.
 
 ## Autorzy
 Michał Biszczanik, Miłosz Chojecki
