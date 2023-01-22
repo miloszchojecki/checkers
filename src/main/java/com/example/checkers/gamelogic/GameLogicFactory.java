@@ -21,13 +21,12 @@ public class GameLogicFactory
     public GameLogic getGameLogic(String gameMode)
     {
         if(gameMode.equals("Warcaby angielskie"))
-            //return new EnglishCheckersGameLogic(board);
-            return new FixedEnglishCheckersGameLogic(board);
+            return new EnglishCheckersGameLogic(board);
         if(gameMode.equals("Warcaby włoskie"))
             return new ItalianCheckersGameLogic(board);
         if(gameMode.equals("Warcaby dwuliniowe"))
             //return new TwoLineCheckersGameLogic(board);
-            return new FixedTwoLineCheckersGameLogic(board);
+            return new TwoLineCheckersGameLogic(board);
         return new DummyGameLogic(board);
     }
 }
