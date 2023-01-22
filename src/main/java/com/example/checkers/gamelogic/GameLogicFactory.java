@@ -25,7 +25,6 @@ public class GameLogicFactory
         if(gameMode.equals("Warcaby włoskie"))
             return new ItalianCheckersGameLogic(board);
         if(gameMode.equals("Warcaby dwuliniowe"))
-            //return new TwoLineCheckersGameLogic(board);
             return new TwoLineCheckersGameLogic(board);
         return new DummyGameLogic(board);
     }
