@@ -7,7 +7,7 @@ import java.util.ArrayList;
 /**
  * class of ClientGameHandler
  */
-public class ClientGameHandler
+public class ClientGameHandler implements CommandReceiver
 {
     private final Tile[][] tiles;
     private final Label label;
@@ -103,7 +103,7 @@ public class ClientGameHandler
                 return;
             select(tile);
             resetPossibleMoves();
-            clientCommunicator.getPossibleMoves(new TileCoordinates(tile));
+            clientCommunicator.sendGetPossibleMoves(new TileCoordinates(tile));
         }
         else if (possibleMoves != null && selected != null)
         {

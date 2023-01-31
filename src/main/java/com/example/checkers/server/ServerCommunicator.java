@@ -18,7 +18,7 @@ public class ServerCommunicator
     qxy - make piece on x,y queen
     tc - turn of player of color c
     wc - player c wins
-    xab - move possible to a,b
+    xabcd - move possible from a,b to c,d
 
     in:
     sxy - selected tile x,y
@@ -110,6 +110,7 @@ public class ServerCommunicator
     {
         PrintWriter out = getPlayerOutput(player);
         System.out.println("server to player " + player + " (possible moves): " + tileCoordinates.size());
+        out.println(tileCoordinates.size());
         for(TileCoordinates tile : tileCoordinates)
         {
             message = "x" + tile.toString();

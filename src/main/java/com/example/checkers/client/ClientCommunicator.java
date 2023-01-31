@@ -1,14 +1,12 @@
 package com.example.checkers.client;
 
-import com.example.checkers.common.Command;
-import com.example.checkers.common.CommandType;
-import com.example.checkers.common.PieceColor;
-import com.example.checkers.common.TileCoordinates;
+import com.example.checkers.common.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+
 /**
  * class of ClientCommunicator
  */
@@ -28,9 +26,14 @@ public class ClientCommunicator
         return new TileCoordinates(Integer.parseInt(String.valueOf(message.charAt(1))), Integer.parseInt(String.valueOf(message.charAt(2))));
     }
 
+    public TileCoordinates getNextCoordinates(String message)
+    {
+        return new TileCoordinates(Integer.parseInt(String.valueOf(message.charAt(3))), Integer.parseInt(String.valueOf(message.charAt(4))));
+    }
+
     public PieceColor getPlacePieceColor(String message)
     {
-        if(message.charAt(0) != 'p')
+        if (message.charAt(0) != 'p')
             return null;
         return (message.charAt(3) == 'w' ? PieceColor.WHITE : PieceColor.BLACK);
     }
@@ -47,9 +50,9 @@ public class ClientCommunicator
             String message = input.readLine();
             if (message.charAt(0) == 'p')
             {
-               TileCoordinates coordinates = getCoordinates(message);
-               PieceColor placePieceColor = getPlacePieceColor(message);
-               return new Command(CommandType.PLACE, coordinates, placePieceColor);
+                TileCoordinates coordinates = getCoordinates(message);
+                PieceColor placePieceColor = getPlacePieceColor(message);
+                return new Command(CommandType.PLACE, coordinates, placePieceColor);
             }
             else if (message.charAt(0) == 'r')
             {
@@ -61,31 +64,50 @@ public class ClientCommunicator
                 TileCoordinates coordinates = getCoordinates(message);
                 return new Command(CommandType.POSSIBLE, coordinates);
             }
-            else if(message.charAt(0) == 'q')
+            else if (message.charAt(0) == 'q')
             {
                 TileCoordinates coordinates = getCoordinates(message);
                 return new Command(CommandType.QUEEN, coordinates);
             }
-            else if(message.charAt(0) == 'w')
+            else if (message.charAt(0) == 'w')
             {
                 PieceColor pieceColor = getPieceColor(message);
                 return new Command(CommandType.WIN, pieceColor);
             }
-            else if(message.charAt(0) == 't')
+            else if (message.charAt(0) == 't')
             {
                 PieceColor pieceColor = getPieceColor(message);
                 return new Command(CommandType.TURN, pieceColor);
             }
             else
                 return new Command(CommandType.UNKNOWN);
-        } catch (IOException e)
+        }
+        catch (IOException e)
         {
             throw new RuntimeException(e);
         }
 
     }
 
-    public void getPossibleMoves(TileCoordinates tileCoordinates)
+    public ArrayList<MoveCoordinates> getPossibleMoves(TileCoordinates from)
+    {
+        ArrayList<MoveCoordinates> possibleMoves = new ArrayList<>();
+        try
+        {
+            sendGetPossibleMoves(from);
+            int size = Integer.parseInt(input.readLine());
+            for(int i = 0; i< size; i++)
+            {
+                possibleMoves.add(new MoveCoordinates(from, getCommand().getCoordinates()));
+            }
+        }
+        catch (IOException ignored)
+        {
+        }
+        return possibleMoves;
+    }
+
+    public void sendGetPossibleMoves(TileCoordinates tileCoordinates)
     {
         String message = "s" + tileCoordinates.toString();
         output.println(message);

@@ -132,6 +132,8 @@ public class Tile
      */
     public PieceColor getPieceColor()
     {
+        if(piece == null)
+            return null;
         return piece.getPieceColor();
     }
 }

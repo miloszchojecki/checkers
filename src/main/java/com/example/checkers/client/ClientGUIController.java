@@ -38,7 +38,7 @@ public class ClientGUIController implements Initializable
 
     private Socket socket;
 
-    final String[] gameModes = {"Warcaby angielskie", "Warcaby włoskie", "Warcaby dwuliniowe"};
+    private final String[] gameModes = {"Warcaby angielskie", "Warcaby włoskie", "Warcaby dwuliniowe"};
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
