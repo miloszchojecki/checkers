@@ -1,5 +1,6 @@
 # Checkers
-A Java application for playing checkers based on client-server architecture, GUI made with JavaFX
+A Java application for playing checkers based on client-server architecture, GUI made with JavaFX.
+![Screenshot of the game](screenshot.png)
 
 ## Available game types and rules:
 
